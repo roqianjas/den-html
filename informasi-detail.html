@@ -2,81 +2,162 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patriot II Task Force's Performance Draws Attention on 2025 Bastille Day Parade - DEN</title>
   <meta name="description" content="Kinerja Satuan Tugas Patriot II menarik perhatian dalam Parade Hari Bastille 2025 di Paris">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/src/style.css">
 </head>
 <body class="bg-gray-50">
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-    <nav class="px-4 py-3 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-      <div class="flex items-center justify-between">
-        <!-- Logo -->
-        <div class="flex items-center space-x-3">
-          <img src="https://placehold.co/32x32/f59e0b/white?text=🇮🇩" alt="Indonesia Logo" class="w-8 h-8">
-          <span class="text-lg font-semibold text-gray-900">Dewan Ekonomi Nasional</span>
-        </div>
-        
-        <!-- Desktop Navigation -->
-        <div class="items-center hidden space-x-8 lg:flex">
-          <a href="#beranda" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Beranda</a>
-          <a href="#profil" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Profil</a>
-          <a href="#informasi" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Informasi</a>
-          <a href="#publikasi" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Publikasi</a>
-
-          <!-- Language Selector -->
-          <div class="flex items-center space-x-2 text-gray-600">
-            <span class="text-sm font-medium">ID</span>
-            <i class="text-xs fas fa-chevron-down"></i>
+  <header class="sticky top-0 z-50">
+    <!-- Background with gradient -->
+    <div class="bg-gradient-to-t from-header-from to-header-to">
+      <nav class="px-4 py-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3">
+            <img src="https://placehold.co/40x40/85590F/white?text=DEN" alt="DEN Logo" class="w-10 h-10 rounded-full">
+            <span class="text-lg font-semibold text-white">Dewan Ekonomi Nasional</span>
           </div>
-        </div>
-        
-        <!-- Mobile Menu Button -->
-        <button class="lg:hidden" id="mobile-menu-button">
-          <i class="text-xl text-gray-700 fas fa-bars"></i>
-        </button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <div class="lg:hidden" id="mobile-menu">
-        <div class="fixed inset-0 z-50 hidden bg-black bg-opacity-50" id="mobile-overlay">
-          <div class="fixed inset-y-0 right-0 w-64 transition-transform duration-300 transform translate-x-full bg-white shadow-xl" id="mobile-menu-panel">
-            <div class="flex items-center justify-between p-4 border-b">
-              <span class="font-semibold text-gray-900">Menu</span>
-              <button id="mobile-menu-close">
-                <i class="text-gray-500 fas fa-times"></i>
+          
+          <!-- Diagonal shadow effect - positioned between logo and navigation -->
+          <div class="border border-r-1 border-l-0 border-t-0 border-b-0 border-header-border absolute top-0 bottom-0 hidden w-8 transform -translate-x-4 -skew-x-[32deg] lg:block left-1/2 bg-gradient-to-l from-black/30 to-transparent"></div>
+          
+          <!-- Desktop Navigation -->
+          <div class="z-10 items-center hidden space-x-4 lg:flex">
+            <a href="index.html" class="px-4 py-2 font-medium transition-all duration-200 rounded-md text-white/90 hover:text-white hover:bg-white/10">Beranda</a>
+            <a href="profil.html" class="px-4 py-2 font-medium transition-all duration-200 rounded-md text-white/90 hover:text-white hover:bg-white/10">Profil</a>
+            <a href="informasi.html" class="px-4 py-2 font-medium text-white transition-all duration-200 rounded-md hover:bg-white/20">Informasi</a>
+            
+            <!-- Publikasi with Mega Menu -->
+            <div class="group">
+              <button class="flex items-center px-4 py-2 font-medium transition-all duration-200 rounded-md text-white/90 hover:text-white hover:bg-white/10 focus:outline-none">
+                Publikasi
+                <i class="ml-2 text-xs transition-transform duration-200 fas fa-chevron-down group-hover:rotate-180"></i>
               </button>
-            </div>
-            <nav class="p-4">
-              <div class="space-y-4">
-                <a href="#beranda" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Beranda</a>
-                <a href="#profil" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Profil</a>
-                <a href="#informasi" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Informasi</a>
-                <a href="#publikasi" class="block py-2 font-medium text-gray-700 hover:text-blue-600">Publikasi</a>
+              
+              <!-- Mega Menu -->
+              <div class="absolute invisible pt-2 transition-all duration-300 ease-out -translate-x-1/2 opacity-0 left-1/2 top-full group-hover:opacity-100 group-hover:visible">
+                <div class="left-0 right-0 overflow-hidden bg-white border border-gray-100 rounded-lg shadow-2xl w-[1048px] min-w-[1048px] max-w-[1048px]">
+                  <div class="p-8">
+                    <!-- Featured Article -->
+                    <div class="grid grid-cols-12 gap-8 mb-8">
+                      <div class="col-span-4">
+                        <div class="relative">
+                          <img src="https://placehold.co/300x200/302919/ffffff?text=Istana+Negara" alt="Istana Negara" class="object-cover w-full h-48 rounded-lg">
+                          <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-black/50 to-transparent"></div>
+                        </div>
+                        <div class="mt-4">
+                          <h3 class="mb-2 text-lg font-bold text-gray-900">Mengenal Istana Negara Jakarta, Dari Lokasi, Fungsi hingga Sejarahnya</h3>
+                          <p class="mb-3 text-sm text-gray-700">Indonesia memiliki sejarah panjang terhadap perjuangan meraih kemerdekaan dari negara penjajah. Karena inilah, Indonesia juga memiliki banyak istana...</p>
+                        </div>
+                      </div>
+                      
+                      <!-- Menu Categories -->
+                      <div class="col-span-8">
+                        <div class="grid h-full grid-cols-3 gap-6">
+                          <!-- Policy Brief -->
+                          <div>
+                            <h4 class="pb-2 mb-4 font-bold text-gray-900 border-b border-gray-200">Policy Brief</h4>
+                            <ul class="space-y-3">
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Reaffirming Multilateralism: A Proposal for ASEAN Common Framework for Negotiating with the US</a></li>
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                            </ul>
+                          </div>
+                          
+                          <!-- Kajian Strategis -->
+                          <div>
+                            <h4 class="pb-2 mb-4 font-bold text-gray-900 border-b border-gray-200">Kajian Strategis</h4>
+                            <ul class="space-y-3">
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                            </ul>
+                            
+                            <h4 class="pb-2 mt-6 mb-4 font-bold text-gray-900 border-b border-gray-200">Indikator Ekonomi</h4>
+                            <ul class="space-y-3">
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                            </ul>
+                          </div>
+                          
+                          <!-- Memo Ketua DEN -->
+                          <div>
+                            <h4 class="pb-2 mb-4 font-bold text-gray-900 border-b border-gray-200">Memo Ketua DEN kepada Presiden</h4>
+                            <ul class="space-y-3">
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                              <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                            </ul>
 
-                <div class="pt-4 border-t">
-                  <div class="flex items-center space-x-2 text-gray-600">
-                    <span class="text-sm font-medium">ID</span>
-                    <i class="text-xs fas fa-chevron-down"></i>
+                            <h4 class="pb-2 my-4 font-bold text-gray-900 border-b border-gray-200">Jurnal</h4>
+                              <ul class="space-y-3">
+                                <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                                <li><a href="#" class="text-sm text-gray-700 transition-colors hover:text-den-secondary">Dampak dan Kompleksitas Putusan MK Tentang Pemilu Nasional dan lokal</a></li>
+                              </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </nav>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="flex items-center px-3 py-2 space-x-2 transition-all duration-200 rounded-md cursor-pointer text-white/90 hover:text-white hover:bg-white/10">
+              <span class="text-sm font-medium">ID</span>
+              <i class="text-xs fas fa-chevron-down"></i>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button class="p-2 transition-all duration-200 rounded-md lg:hidden text-white/90 hover:text-white hover:bg-white/10" id="mobile-menu-button">
+            <i class="text-xl fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="lg:hidden" id="mobile-menu">
+          <div class="fixed inset-0 z-50 hidden bg-black bg-opacity-50" id="mobile-overlay">
+            <div class="fixed inset-y-0 right-0 w-64 transition-transform duration-300 transform translate-x-full shadow-xl bg-gradient-to-b from-header-from to-header-to" id="mobile-menu-panel">
+              <div class="flex items-center justify-between p-4 border-b border-white/20">
+                <span class="font-semibold text-white">Menu</span>
+                <button id="mobile-menu-close" class="p-1 transition-all duration-200 rounded text-white/70 hover:text-white hover:bg-white/10">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <nav class="p-4">
+                <div class="space-y-2">
+                  <a href="index.html" class="block px-4 py-3 font-medium transition-all duration-200 rounded-md text-white/90 hover:text-white hover:bg-white/10">Beranda</a>
+                  <a href="profil.html" class="block px-4 py-3 font-medium transition-all duration-200 rounded-md text-white/90 hover:text-white hover:bg-white/10">Profil</a>
+                  <a href="informasi.html" class="block px-4 py-3 font-medium text-white transition-all duration-200 rounded-md hover:bg-white/20">Informasi</a>                
+                  <a href="publikasi.html" class="block px-4 py-3 font-medium transition-all duration-200 rounded-md text-white/90 hover:text-white hover:bg-white/10">Publikasi</a>
+
+                  <div class="pt-4 border-t border-white/20">
+                    <div class="flex items-center px-4 py-3 space-x-2 transition-all duration-200 rounded-md cursor-pointer text-white/90 hover:text-white hover:bg-white/10">
+                      <span class="text-sm font-medium">ID</span>
+                      <i class="text-xs fas fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
   <!-- Breadcrumb -->
   <section class="bg-white border-b">
     <div class="px-4 py-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <nav class="flex items-center space-x-2 text-sm">
-        <a href="index.html" class="text-gray-500 transition-colors hover:text-blue-600">Beranda</a>
+        <a href="index.html" class="text-gray-500 transition-colors hover:text-den-secondary">Beranda</a>
         <i class="text-gray-400 fas fa-chevron-right"></i>
-        <a href="informasi.html" class="text-gray-500 transition-colors hover:text-blue-600">Informasi</a>
+        <a href="informasi.html" class="text-gray-500 transition-colors hover:text-den-secondary">Informasi</a>
         <i class="text-gray-400 fas fa-chevron-right"></i>
         <span class="text-gray-900">News</span>
       </nav>
@@ -94,30 +175,30 @@
           <span class="text-gray-500">5 min read</span>
         </div>
         
-        <h1 class="mb-6 text-4xl font-bold leading-tight text-gray-900 lg:text-5xl">
+        <h1 class="mb-6 text-4xl font-bold leading-tight text-text-primary lg:text-5xl">
           Patriot II Task Force's Performance Draws Attention on 2025 Bastille Day Parade in Paris
         </h1>
         
         <div class="flex items-center justify-between py-4 border-t border-b border-gray-200">
           <div class="flex items-center gap-4">
-            <img src="https://placehold.co/48x48/374151/ffffff?text=DEN" alt="Author" class="w-12 h-12 rounded-full">
+            <img src="https://placehold.co/48x48/302919/ffffff?text=DEN" alt="Author" class="w-12 h-12 rounded-full">
             <div>
-              <div class="font-semibold text-gray-900">Dewan Ekonomi Nasional</div>
+              <div class="font-semibold text-text-primary">Dewan Ekonomi Nasional</div>
               <div class="text-sm text-gray-500">Official News</div>
             </div>
           </div>
           
           <div class="flex items-center gap-3">
-            <button class="p-2 text-gray-500 transition-colors rounded-full hover:text-blue-600 hover:bg-gray-100">
+            <button class="p-2 text-gray-500 transition-colors rounded-full hover:text-den-secondary hover:bg-gray-100">
               <i class="fab fa-facebook-f"></i>
             </button>
-            <button class="p-2 text-gray-500 transition-colors rounded-full hover:text-blue-600 hover:bg-gray-100">
+            <button class="p-2 text-gray-500 transition-colors rounded-full hover:text-den-secondary hover:bg-gray-100">
               <i class="fab fa-twitter"></i>
             </button>
-            <button class="p-2 text-gray-500 transition-colors rounded-full hover:text-blue-600 hover:bg-gray-100">
+            <button class="p-2 text-gray-500 transition-colors rounded-full hover:text-den-secondary hover:bg-gray-100">
               <i class="fab fa-linkedin-in"></i>
             </button>
-            <button class="p-2 text-gray-500 transition-colors rounded-full hover:text-blue-600 hover:bg-gray-100">
+            <button class="p-2 text-gray-500 transition-colors rounded-full hover:text-den-secondary hover:bg-gray-100">
               <i class="fas fa-share-alt"></i>
             </button>
           </div>
@@ -131,7 +212,7 @@
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="max-w-5xl mx-auto">
         <div class="relative overflow-hidden shadow-2xl rounded-xl">
-          <img src="https://placehold.co/1200x600/374151/ffffff?text=Bastille+Day+Parade+2025" alt="Bastille Day Parade 2025" class="object-cover w-full h-96">
+          <img src="https://placehold.co/1200x600/302919/ffffff?text=Bastille+Day+Parade+2025" alt="Bastille Day Parade 2025" class="object-cover w-full h-96">
           <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
           <div class="absolute text-white bottom-4 left-4">
             <p class="text-sm opacity-90">Parade Hari Bastille 2025 di Paris menampilkan Satuan Tugas Patriot II Indonesia</p>
@@ -148,49 +229,49 @@
         <!-- Main Article -->
         <div class="lg:col-span-3">
           <article class="prose prose-lg max-w-none">
-            <div class="p-6 mb-8 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
-              <p class="font-medium leading-relaxed text-gray-700">
+            <div class="p-6 mb-8 border-l-4 rounded-r-lg border-den-secondary bg-den-secondary/5">
+              <p class="font-medium leading-relaxed text-text-secondary">
                 <strong>PARIS</strong> - Satuan Tugas Patriot II Indonesia berhasil menarik perhatian dunia dalam Parade Hari Bastille 2025 yang diselenggarakan di Paris, Prancis. Penampilan yang memukau dari pasukan elit Indonesia ini mendapat apresiasi tinggi dari berbagai pihak internasional.
               </p>
             </div>
 
-            <p class="text-lg leading-relaxed text-gray-700">
+            <p class="text-lg leading-relaxed text-text-secondary">
               Parade Hari Bastille tahun ini menandai momen bersejarah bagi Indonesia, di mana untuk pertama kalinya Satuan Tugas Patriot II turut berpartisipasi dalam perayaan kemerdekaan Prancis yang bergengsi ini. Kehadiran mereka tidak hanya menunjukkan kekuatan militer Indonesia, tetapi juga mempererat hubungan diplomatik antara kedua negara.
             </p>
 
-            <h2 class="mt-8 mb-4 text-2xl font-bold text-gray-900">Penampilan Memukau di Champs-Élysées</h2>
+            <h2 class="mt-8 mb-4 text-2xl font-bold text-text-primary">Penampilan Memukau di Champs-Élysées</h2>
             
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-text-secondary">
               Berbaris dengan formasi yang sempurna di sepanjang Champs-Élysées, anggota Satuan Tugas Patriot II menampilkan kedisiplinan dan profesionalisme tingkat tinggi. Seragam mereka yang rapi dan gerakan yang sinkron mendapat pujian dari para penonton yang memadati jalanan Paris.
             </p>
 
-            <blockquote class="pl-6 my-8 text-lg italic text-gray-700 border-l-4 border-blue-600">
+            <blockquote class="pl-6 my-8 text-lg italic border-l-4 text-text-secondary border-den-secondary">
               "Kehadiran Satuan Tugas Patriot II dalam parade ini merupakan bukti nyata dari hubungan strategis yang semakin menguat antara Indonesia dan Prancis, khususnya dalam bidang pertahanan dan keamanan."
             </blockquote>
 
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-text-secondary">
               Menurut sumber dari Kedutaan Besar Indonesia di Paris, partisipasi ini merupakan hasil dari kerjasama bilateral yang telah dirintis sejak beberapa tahun terakhir. Proses seleksi yang ketat dilakukan untuk memastikan hanya personel terbaik yang dapat mewakili Indonesia dalam acara bergengsi ini.
             </p>
 
             <!-- Image Gallery -->
             <div class="grid gap-4 my-8 md:grid-cols-2">
               <div class="overflow-hidden rounded-lg">
-                <img src="https://placehold.co/400x300/374151/ffffff?text=Formation+March" alt="Formation March" class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/302919/ffffff?text=Formation+March" alt="Formation March" class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
               </div>
               <div class="overflow-hidden rounded-lg">
-                <img src="https://placehold.co/400x300/374151/ffffff?text=Ceremonial+Guard" alt="Ceremonial Guard" class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
+                <img src="https://placehold.co/400x300/302919/ffffff?text=Ceremonial+Guard" alt="Ceremonial Guard" class="object-cover w-full h-48 transition-transform duration-300 hover:scale-105">
               </div>
             </div>
 
-            <h2 class="mt-8 mb-4 text-2xl font-bold text-gray-900">Dampak Diplomatik</h2>
+            <h2 class="mt-8 mb-4 text-2xl font-bold text-text-primary">Dampak Diplomatik</h2>
             
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-text-secondary">
               Keikutsertaan Indonesia dalam Parade Hari Bastille 2025 ini tidak hanya berdampak pada aspek militer, tetapi juga membuka peluang kerjasama yang lebih luas dalam berbagai bidang. Pemerintah Prancis melalui Kementerian Pertahanannya menyatakan apresiasi tinggi atas profesionalisme yang ditunjukkan oleh Satuan Tugas Patriot II.
             </p>
 
             <div class="p-6 my-8 rounded-lg bg-gray-50">
-              <h3 class="mb-3 text-lg font-semibold text-gray-900">Fakta Menarik</h3>
-              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+              <h3 class="mb-3 text-lg font-semibold text-text-primary">Fakta Menarik</h3>
+              <ul class="space-y-2 list-disc list-inside text-text-secondary">
                 <li>Ini adalah partisipasi pertama Indonesia dalam Parade Hari Bastille</li>
                 <li>50 personel terpilih dari Satuan Tugas Patriot II ikut serta</li>
                 <li>Persiapan dilakukan selama 6 bulan sebelum acara</li>
@@ -199,34 +280,34 @@
               </ul>
             </div>
 
-            <h2 class="mt-8 mb-4 text-2xl font-bold text-gray-900">Respons Positif Internasional</h2>
+            <h2 class="mt-8 mb-4 text-2xl font-bold text-text-primary">Respons Positif Internasional</h2>
             
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-text-secondary">
               Media internasional memberikan liputan yang sangat positif terhadap penampilan Satuan Tugas Patriot II. Berbagai outlet berita terkemuka seperti BBC, CNN International, dan France 24 memberikan sorotan khusus pada formasi dan kedisiplinan yang ditampilkan oleh pasukan Indonesia.
             </p>
 
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-text-secondary">
               Dubes Indonesia untuk Prancis menyatakan bahwa ini merupakan momen bersejarah yang akan dikenang sebagai tonggak penting dalam hubungan bilateral kedua negara. "Partisipasi ini membuka jalan bagi kerjasama yang lebih erat di masa depan," ujarnya dalam konferensi pers usai acara.
             </p>
 
-            <h2 class="mt-8 mb-4 text-2xl font-bold text-gray-900">Rencana Kerjasama Masa Depan</h2>
+            <h2 class="mt-8 mb-4 text-2xl font-bold text-text-primary">Rencana Kerjasama Masa Depan</h2>
             
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-text-secondary">
               Kesuksesan partisipasi dalam Parade Hari Bastille 2025 ini diharapkan dapat membuka peluang kerjasama yang lebih luas antara Indonesia dan Prancis. Beberapa program pertukaran personel militer dan pelatihan bersama telah direncanakan untuk tahun-tahun mendatang.
             </p>
 
-            <p class="leading-relaxed text-gray-700">
+            <p class="leading-relaxed text-text-secondary">
               Selain itu, kedua negara juga berkomitmen untuk memperkuat kerjasama dalam bidang teknologi pertahanan, cybersecurity, dan peacekeeping operations di berbagai misi PBB. Ini menunjukkan bahwa hubungan strategis antara Indonesia dan Prancis akan terus berkembang ke arah yang lebih positif.
             </p>
 
             <!-- Video Embed -->
             <div class="p-6 my-8 text-center bg-gray-100 rounded-lg">
               <div class="mb-4">
-                <i class="text-4xl text-blue-600 fas fa-play-circle"></i>
+                <i class="text-4xl text-den-secondary fas fa-play-circle"></i>
               </div>
-              <h3 class="mb-2 text-lg font-semibold text-gray-900">Video Highlights</h3>
-              <p class="mb-4 text-gray-600">Saksikan momen bersejarah Satuan Tugas Patriot II di Parade Hari Bastille 2025</p>
-              <button class="px-6 py-3 font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <h3 class="mb-2 text-lg font-semibold text-text-primary">Video Highlights</h3>
+              <p class="mb-4 text-text-secondary">Saksikan momen bersejarah Satuan Tugas Patriot II di Parade Hari Bastille 2025</p>
+              <button class="px-6 py-3 font-medium text-white transition-colors rounded-lg bg-den-secondary hover:bg-den-secondary/90 focus:outline-none focus:ring-2 focus:ring-den-secondary">
                 <i class="mr-2 fas fa-play"></i>
                 Tonton Video
               </button>
@@ -234,21 +315,21 @@
 
             <!-- Tags -->
             <div class="pt-6 mt-8 border-t">
-              <h3 class="mb-4 text-lg font-semibold text-gray-900">Tags</h3>
+              <h3 class="mb-4 text-lg font-semibold text-text-primary">Tags</h3>
               <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full">Patriot II</span>
-                <span class="px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full">Bastille Day</span>
-                <span class="px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full">Paris</span>
-                <span class="px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full">Indonesia-France</span>
-                <span class="px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full">Military Cooperation</span>
-                <span class="px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full">Diplomacy</span>
+                <span class="px-3 py-1 text-sm rounded-full text-den-secondary bg-den-secondary/10">Patriot II</span>
+                <span class="px-3 py-1 text-sm rounded-full text-den-secondary bg-den-secondary/10">Bastille Day</span>
+                <span class="px-3 py-1 text-sm rounded-full text-den-secondary bg-den-secondary/10">Paris</span>
+                <span class="px-3 py-1 text-sm rounded-full text-den-secondary bg-den-secondary/10">Indonesia-France</span>
+                <span class="px-3 py-1 text-sm rounded-full text-den-secondary bg-den-secondary/10">Military Cooperation</span>
+                <span class="px-3 py-1 text-sm rounded-full text-den-secondary bg-den-secondary/10">Diplomacy</span>
               </div>
             </div>
           </article>
 
           <!-- Share Section -->
           <div class="pt-8 mt-8 border-t">
-            <h3 class="mb-4 text-lg font-semibold text-gray-900">Bagikan Berita</h3>
+            <h3 class="mb-4 text-lg font-semibold text-text-primary">Bagikan Berita</h3>
             <div class="flex items-center gap-4">
               <button class="flex items-center gap-2 px-4 py-2 text-white transition-colors bg-blue-600 rounded-lg share-btn hover:bg-blue-700">
                 <i class="fab fa-facebook-f"></i>
@@ -275,18 +356,18 @@
 
           <!-- Comments Section -->
           <div class="pt-8 mt-8 border-t">
-            <h3 class="mb-6 text-lg font-semibold text-gray-900">Komentar</h3>
+            <h3 class="mb-6 text-lg font-semibold text-text-primary">Komentar</h3>
             
             <!-- Comment Form -->
             <div class="p-6 mb-6 rounded-lg bg-gray-50">
-              <h4 class="mb-4 font-medium text-gray-900">Tinggalkan Komentar</h4>
+              <h4 class="mb-4 font-medium text-text-primary">Tinggalkan Komentar</h4>
               <form class="space-y-4">
                 <div class="grid gap-4 md:grid-cols-2">
-                  <input type="text" placeholder="Nama Anda" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                  <input type="email" placeholder="Email Anda" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <input type="text" placeholder="Nama Anda" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-den-secondary focus:border-transparent">
+                  <input type="email" placeholder="Email Anda" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-den-secondary focus:border-transparent">
                 </div>
-                <textarea rows="4" placeholder="Tulis komentar Anda..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
-                <button type="submit" class="px-6 py-3 font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <textarea rows="4" placeholder="Tulis komentar Anda..." class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-den-secondary focus:border-transparent"></textarea>
+                <button type="submit" class="px-6 py-3 font-medium text-white transition-colors rounded-lg bg-den-secondary hover:bg-den-secondary/90 focus:outline-none focus:ring-2 focus:ring-den-secondary">
                   <i class="mr-2 fas fa-paper-plane"></i>
                   Kirim Komentar
                 </button>
@@ -296,20 +377,20 @@
             <!-- Sample Comments -->
             <div class="space-y-6">
               <div class="flex gap-4">
-                <img src="https://placehold.co/48x48/374151/ffffff?text=U1" alt="User" class="w-12 h-12 rounded-full">
+                <img src="https://placehold.co/48x48/302919/ffffff?text=U1" alt="User" class="w-12 h-12 rounded-full">
                 <div class="flex-1">
                   <div class="p-4 bg-white rounded-lg shadow-sm">
                     <div class="flex items-center justify-between mb-2">
-                      <h5 class="font-medium text-gray-900">Ahmad Wijaya</h5>
+                      <h5 class="font-medium text-text-primary">Ahmad Wijaya</h5>
                       <span class="text-sm text-gray-500">2 jam lalu</span>
                     </div>
-                    <p class="text-gray-700">Bangga sekali melihat Satuan Tugas Patriot II tampil memukau di Paris. Ini adalah prestasi yang luar biasa untuk Indonesia!</p>
+                    <p class="text-text-secondary">Bangga sekali melihat Satuan Tugas Patriot II tampil memukau di Paris. Ini adalah prestasi yang luar biasa untuk Indonesia!</p>
                     <div class="flex items-center gap-4 mt-3 text-sm text-gray-500">
-                      <button class="transition-colors hover:text-blue-600">
+                      <button class="transition-colors hover:text-den-secondary">
                         <i class="mr-1 fas fa-thumbs-up"></i>
                         12
                       </button>
-                      <button class="transition-colors hover:text-blue-600">
+                      <button class="transition-colors hover:text-den-secondary">
                         <i class="mr-1 fas fa-reply"></i>
                         Balas
                       </button>
@@ -319,20 +400,20 @@
               </div>
 
               <div class="flex gap-4">
-                <img src="https://placehold.co/48x48/374151/ffffff?text=U2" alt="User" class="w-12 h-12 rounded-full">
+                <img src="https://placehold.co/48x48/302919/ffffff?text=U2" alt="User" class="w-12 h-12 rounded-full">
                 <div class="flex-1">
                   <div class="p-4 bg-white rounded-lg shadow-sm">
                     <div class="flex items-center justify-between mb-2">
-                      <h5 class="font-medium text-gray-900">Sari Indrawati</h5>
+                      <h5 class="font-medium text-text-primary">Sari Indrawati</h5>
                       <span class="text-sm text-gray-500">4 jam lalu</span>
                     </div>
-                    <p class="text-gray-700">Semoga kerjasama Indonesia-Prancis semakin erat setelah acara ini. Diplomasi yang sangat baik!</p>
+                    <p class="text-text-secondary">Semoga kerjasama Indonesia-Prancis semakin erat setelah acara ini. Diplomasi yang sangat baik!</p>
                     <div class="flex items-center gap-4 mt-3 text-sm text-gray-500">
-                      <button class="transition-colors hover:text-blue-600">
+                      <button class="transition-colors hover:text-den-secondary">
                         <i class="mr-1 fas fa-thumbs-up"></i>
                         8
                       </button>
-                      <button class="transition-colors hover:text-blue-600">
+                      <button class="transition-colors hover:text-den-secondary">
                         <i class="mr-1 fas fa-reply"></i>
                         Balas
                       </button>
@@ -349,26 +430,26 @@
           <div class="sticky space-y-6 top-24">
             <!-- Article Info -->
             <div class="p-6 bg-white shadow-lg rounded-xl">
-              <h3 class="mb-4 text-lg font-semibold text-gray-900">Informasi Artikel</h3>
+              <h3 class="mb-4 text-lg font-semibold text-text-primary">Informasi Artikel</h3>
               <div class="space-y-3 text-sm">
                 <div class="flex justify-between">
-                  <span class="text-gray-600">Kategori:</span>
+                  <span class="text-text-secondary">Kategori:</span>
                   <span class="font-medium">News</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-gray-600">Tanggal:</span>
+                  <span class="text-text-secondary">Tanggal:</span>
                   <span class="font-medium">Jul 26, 2025</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-gray-600">Penulis:</span>
+                  <span class="text-text-secondary">Penulis:</span>
                   <span class="font-medium">DEN Official</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-gray-600">Waktu Baca:</span>
+                  <span class="text-text-secondary">Waktu Baca:</span>
                   <span class="font-medium">5 menit</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-gray-600">Views:</span>
+                  <span class="text-text-secondary">Views:</span>
                   <span class="font-medium">1,247</span>
                 </div>
               </div>
@@ -376,36 +457,36 @@
 
             <!-- Related News -->
             <div class="p-6 bg-white shadow-lg rounded-xl">
-              <h3 class="mb-4 text-lg font-semibold text-gray-900">Berita Terkait</h3>
+              <h3 class="mb-4 text-lg font-semibold text-text-primary">Berita Terkait</h3>
               <div class="space-y-4">
                 <div class="pb-3 border-b border-gray-200">
-                  <h4 class="mb-1 text-sm font-medium text-gray-900 transition-colors cursor-pointer hover:text-blue-600">
+                  <h4 class="mb-1 text-sm font-medium transition-colors cursor-pointer text-text-primary hover:text-den-secondary">
                     Kerjasama Pertahanan Indonesia-Prancis Semakin Menguat
                   </h4>
-                  <p class="text-xs text-gray-600">News • Jul 20, 2025</p>
+                  <p class="text-xs text-text-secondary">News • Jul 20, 2025</p>
                 </div>
                 <div class="pb-3 border-b border-gray-200">
-                  <h4 class="mb-1 text-sm font-medium text-gray-900 transition-colors cursor-pointer hover:text-blue-600">
+                  <h4 class="mb-1 text-sm font-medium transition-colors cursor-pointer text-text-primary hover:text-den-secondary">
                     Satuan Tugas Patriot II Jalani Pelatihan Intensif
                   </h4>
-                  <p class="text-xs text-gray-600">News • Jul 15, 2025</p>
+                  <p class="text-xs text-text-secondary">News • Jul 15, 2025</p>
                 </div>
                 <div>
-                  <h4 class="mb-1 text-sm font-medium text-gray-900 transition-colors cursor-pointer hover:text-blue-600">
+                  <h4 class="mb-1 text-sm font-medium transition-colors cursor-pointer text-text-primary hover:text-den-secondary">
                     Indonesia Perkuat Diplomasi Militer di Eropa
                   </h4>
-                  <p class="text-xs text-gray-600">Analysis • Jul 10, 2025</p>
+                  <p class="text-xs text-text-secondary">Analysis • Jul 10, 2025</p>
                 </div>
               </div>
             </div>
 
             <!-- Newsletter Signup -->
-            <div class="p-6 border border-blue-200 shadow-lg bg-blue-50 rounded-xl">
-              <h3 class="mb-3 text-lg font-semibold text-gray-900">Newsletter</h3>
-              <p class="mb-4 text-sm text-gray-600">Dapatkan update berita terbaru dari DEN langsung di inbox Anda.</p>
+            <div class="p-6 border shadow-lg border-den-secondary/20 bg-den-secondary/5 rounded-xl">
+              <h3 class="mb-3 text-lg font-semibold text-text-primary">Newsletter</h3>
+              <p class="mb-4 text-sm text-text-secondary">Dapatkan update berita terbaru dari DEN langsung di inbox Anda.</p>
               <form class="space-y-3">
-                <input type="email" placeholder="Email Anda" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                <button type="submit" class="w-full py-2 text-sm font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="email" placeholder="Email Anda" class="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-den-secondary focus:border-transparent">
+                <button type="submit" class="w-full py-2 text-sm font-medium text-white transition-colors rounded-lg bg-den-secondary hover:bg-den-secondary/90 focus:outline-none focus:ring-2 focus:ring-den-secondary">
                   <i class="mr-2 fas fa-envelope"></i>
                   Berlangganan
                 </button>
@@ -414,14 +495,14 @@
 
             <!-- Popular Tags -->
             <div class="p-6 bg-white shadow-lg rounded-xl">
-              <h3 class="mb-4 text-lg font-semibold text-gray-900">Tag Populer</h3>
+              <h3 class="mb-4 text-lg font-semibold text-text-primary">Tag Populer</h3>
               <div class="flex flex-wrap gap-2">
-                <span class="px-2 py-1 text-xs text-gray-700 transition-colors bg-gray-100 rounded-full cursor-pointer hover:bg-blue-100 hover:text-blue-700">Diplomasi</span>
-                <span class="px-2 py-1 text-xs text-gray-700 transition-colors bg-gray-100 rounded-full cursor-pointer hover:bg-blue-100 hover:text-blue-700">Militer</span>
-                <span class="px-2 py-1 text-xs text-gray-700 transition-colors bg-gray-100 rounded-full cursor-pointer hover:bg-blue-100 hover:text-blue-700">Kerjasama</span>
-                <span class="px-2 py-1 text-xs text-gray-700 transition-colors bg-gray-100 rounded-full cursor-pointer hover:bg-blue-100 hover:text-blue-700">Internasional</span>
-                <span class="px-2 py-1 text-xs text-gray-700 transition-colors bg-gray-100 rounded-full cursor-pointer hover:bg-blue-100 hover:text-blue-700">Prancis</span>
-                <span class="px-2 py-1 text-xs text-gray-700 transition-colors bg-gray-100 rounded-full cursor-pointer hover:bg-blue-100 hover:text-blue-700">Paris</span>
+                <span class="px-2 py-1 text-xs transition-colors bg-gray-100 rounded-full cursor-pointer text-text-secondary hover:bg-den-secondary/10 hover:text-den-secondary">Diplomasi</span>
+                <span class="px-2 py-1 text-xs transition-colors bg-gray-100 rounded-full cursor-pointer text-text-secondary hover:bg-den-secondary/10 hover:text-den-secondary">Militer</span>
+                <span class="px-2 py-1 text-xs transition-colors bg-gray-100 rounded-full cursor-pointer text-text-secondary hover:bg-den-secondary/10 hover:text-den-secondary">Kerjasama</span>
+                <span class="px-2 py-1 text-xs transition-colors bg-gray-100 rounded-full cursor-pointer text-text-secondary hover:bg-den-secondary/10 hover:text-den-secondary">Internasional</span>
+                <span class="px-2 py-1 text-xs transition-colors bg-gray-100 rounded-full cursor-pointer text-text-secondary hover:bg-den-secondary/10 hover:text-den-secondary">Prancis</span>
+                <span class="px-2 py-1 text-xs transition-colors bg-gray-100 rounded-full cursor-pointer text-text-secondary hover:bg-den-secondary/10 hover:text-den-secondary">Paris</span>
               </div>
             </div>
           </div>
@@ -434,8 +515,8 @@
   <section class="py-16 bg-gray-50">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-between mb-8">
-        <h2 class="text-3xl font-bold text-gray-900">Berita/Siaran Pers Terkait</h2>
-        <a href="informasi.html" class="font-medium text-blue-600 transition-colors hover:text-blue-700">
+        <h2 class="text-3xl font-bold text-text-primary">Berita/Siaran Pers Terkait</h2>
+        <a href="informasi.html" class="font-medium transition-colors text-den-secondary hover:text-den-secondary/80">
           Lihat Semua Berita →
         </a>
       </div>
@@ -443,53 +524,53 @@
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         <!-- Related News Item 1 -->
         <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
-          <img src="https://placehold.co/300x200/374151/ffffff?text=Defense+Cooperation" alt="Defense Cooperation" class="object-cover w-full h-32 mb-4 rounded-lg">
+          <img src="https://placehold.co/300x200/302919/ffffff?text=Defense+Cooperation" alt="Defense Cooperation" class="object-cover w-full h-32 mb-4 rounded-lg">
           <div class="flex items-center gap-2 mb-2">
             <span class="px-2 py-1 text-xs text-red-800 bg-red-100 rounded-full">News</span>
           </div>
-          <h3 class="mb-2 text-sm font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">
+          <h3 class="mb-2 text-sm font-bold transition-colors cursor-pointer text-text-primary hover:text-den-secondary">
             Mengenal Istana Negara Jakarta, Dari Lokasi, Fungsi hingga Sejarahnya
           </h3>
-          <p class="mb-3 text-xs text-gray-600">Kerjasama pertahanan Indonesia-Prancis mencapai milestone baru...</p>
+          <p class="mb-3 text-xs text-text-secondary">Kerjasama pertahanan Indonesia-Prancis mencapai milestone baru...</p>
           <div class="text-xs text-gray-500">Jul 20, 2025</div>
         </div>
 
         <!-- Related News Item 2 -->
         <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
-          <img src="https://placehold.co/300x200/374151/ffffff?text=Military+Training" alt="Military Training" class="object-cover w-full h-32 mb-4 rounded-lg">
+          <img src="https://placehold.co/300x200/302919/ffffff?text=Military+Training" alt="Military Training" class="object-cover w-full h-32 mb-4 rounded-lg">
           <div class="flex items-center gap-2 mb-2">
             <span class="px-2 py-1 text-xs text-red-800 bg-red-100 rounded-full">News</span>
           </div>
-          <h3 class="mb-2 text-sm font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">
+          <h3 class="mb-2 text-sm font-bold transition-colors cursor-pointer text-text-primary hover:text-den-secondary">
             Mengenal Istana Negara Jakarta, Dari Lokasi, Fungsi hingga Sejarahnya
           </h3>
-          <p class="mb-3 text-xs text-gray-600">Persiapan intensif dilakukan sebelum keberangkatan ke Paris...</p>
+          <p class="mb-3 text-xs text-text-secondary">Persiapan intensif dilakukan sebelum keberangkatan ke Paris...</p>
           <div class="text-xs text-gray-500">Jul 15, 2025</div>
         </div>
 
         <!-- Related News Item 3 -->
         <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
-          <img src="https://placehold.co/300x200/374151/ffffff?text=European+Diplomacy" alt="European Diplomacy" class="object-cover w-full h-32 mb-4 rounded-lg">
+          <img src="https://placehold.co/300x200/302919/ffffff?text=European+Diplomacy" alt="European Diplomacy" class="object-cover w-full h-32 mb-4 rounded-lg">
           <div class="flex items-center gap-2 mb-2">
             <span class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Analysis</span>
           </div>
-          <h3 class="mb-2 text-sm font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">
+          <h3 class="mb-2 text-sm font-bold transition-colors cursor-pointer text-text-primary hover:text-den-secondary">
             Mengenal Istana Negara Jakarta, Dari Lokasi, Fungsi hingga Sejarahnya
           </h3>
-          <p class="mb-3 text-xs text-gray-600">Strategi diplomasi militer Indonesia di kawasan Eropa...</p>
+          <p class="mb-3 text-xs text-text-secondary">Strategi diplomasi militer Indonesia di kawasan Eropa...</p>
           <div class="text-xs text-gray-500">Jul 10, 2025</div>
         </div>
 
         <!-- Related News Item 4 -->
         <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
-          <img src="https://placehold.co/300x200/374151/ffffff?text=International+Relations" alt="International Relations" class="object-cover w-full h-32 mb-4 rounded-lg">
+          <img src="https://placehold.co/300x200/302919/ffffff?text=International+Relations" alt="International Relations" class="object-cover w-full h-32 mb-4 rounded-lg">
           <div class="flex items-center gap-2 mb-2">
             <span class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Press Release</span>
           </div>
-          <h3 class="mb-2 text-sm font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">
+          <h3 class="mb-2 text-sm font-bold transition-colors cursor-pointer text-text-primary hover:text-den-secondary">
             Mengenal Istana Negara Jakarta, Dari Lokasi, Fungsi hingga Sejarahnya
           </h3>
-          <p class="mb-3 text-xs text-gray-600">Hubungan bilateral Indonesia-Prancis semakin menguat...</p>
+          <p class="mb-3 text-xs text-text-secondary">Hubungan bilateral Indonesia-Prancis semakin menguat...</p>
           <div class="text-xs text-gray-500">Jul 5, 2025</div>
         </div>
       </div>
@@ -497,27 +578,27 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 text-white bg-gray-900">
+  <footer class="py-12 text-white bg-den-dark">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="grid gap-8 md:grid-cols-3">
         <!-- Logo & Description -->
         <div>
           <div class="flex items-center mb-4 space-x-3">
-            <img src="https://placehold.co/40x40/1e40af/white?text=DEN" alt="DEN Logo" class="w-10 h-10 rounded-full">
+            <img src="https://placehold.co/40x40/85590F/white?text=DEN" alt="DEN Logo" class="w-10 h-10 rounded-full">
             <span class="text-xl font-bold">Dewan Ekonomi Nasional</span>
           </div>
           <p class="mb-4 text-gray-400">
             Dewan Ekonomi Nasional mempunyai tugas menyelenggarakan pemberian dukungan dan rekomendasi kepada Presiden dalam melaksanakan percepatan pelaksanaan kebijakan strategis dan program prioritas di bidang ekonomi.
           </p>
           <div class="flex space-x-4">
-            <a href="#" class="flex items-center justify-center w-8 h-8 text-gray-400 transition-colors bg-gray-700 rounded hover:text-white hover:bg-gray-600">
-              <i class="fab fa-facebook-f"></i>
+            <a href="#" class="flex items-center justify-center w-8 h-8 transition-colors bg-white rounded text-den-secondary">
+              <i class="text-den-secondary fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="flex items-center justify-center w-8 h-8 text-gray-400 transition-colors bg-gray-700 rounded hover:text-white hover:bg-gray-600">
-              <i class="fab fa-twitter"></i>
+            <a href="#" class="flex items-center justify-center w-8 h-8 transition-colors bg-white rounded text-den-secondary">
+              <i class="text-den-secondary fab fa-twitter"></i>
             </a>
-            <a href="#" class="flex items-center justify-center w-8 h-8 text-gray-400 transition-colors bg-gray-700 rounded hover:text-white hover:bg-gray-600">
-              <i class="fab fa-instagram"></i>
+            <a href="#" class="flex items-center justify-center w-8 h-8 transition-colors bg-white rounded text-den-secondary">
+              <i class="text-den-secondary fab fa-instagram"></i>
             </a>
           </div>
         </div>
@@ -526,10 +607,10 @@
         <div>
           <h3 class="mb-4 text-lg font-bold">Link</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 transition-colors hover:text-white">Beranda</a></li>
-            <li><a href="#" class="text-gray-400 transition-colors hover:text-white">Profil</a></li>
-            <li><a href="#" class="text-gray-400 transition-colors hover:text-white">Informasi</a></li>
-            <li><a href="#" class="text-gray-400 transition-colors hover:text-white">Publikasi</a></li>
+            <li><a href="index.html" class="text-gray-400 transition-colors hover:text-white">Beranda</a></li>
+            <li><a href="profil.html" class="text-gray-400 transition-colors hover:text-white">Profil</a></li>
+            <li><a href="informasi.html" class="text-gray-400 transition-colors hover:text-white">Informasi</a></li>
+            <li><a href="publikasi.html" class="text-gray-400 transition-colors hover:text-white">Publikasi</a></li>
           </ul>
         </div>
 
@@ -538,16 +619,16 @@
           <h3 class="mb-4 text-lg font-bold">Contact Info</h3>
           <div class="space-y-3">
             <div class="flex items-start space-x-3">
-              <i class="mt-1 text-yellow-400 fas fa-map-marker-alt"></i>
+              <i class="mt-1 text-den-secondary fas fa-map-marker-alt"></i>
               <span class="text-gray-400">Jl. M.H. Thamrin No.8, Kb. Sirih, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10340</span>
             </div>
             <div class="flex items-center space-x-3">
-              <i class="text-yellow-400 fas fa-phone"></i>
+              <i class="text-den-secondary fas fa-phone"></i>
               <span class="text-gray-400">+62-21-23951100</span>
             </div>
             <div class="flex items-center space-x-3">
-              <i class="text-yellow-400 fas fa-envelope"></i>
-              <span class="text-gray-400">sekretariat@dewanekonomi.go.id</span>
+              <i class="text-den-secondary fas fa-envelope"></i>
+              <span class="text-gray-400">info@dewanekonomi.go.id</span>
             </div>
           </div>
         </div>
@@ -602,112 +683,34 @@
       });
     });
 
+    // Video play button
+    document.querySelector('button[class*="bg-den-secondary"]').addEventListener('click', function() {
+      alert('Video akan segera tersedia. Terima kasih atas perhatian Anda!');
+    });
+
     // Comment form submission
     document.querySelector('form').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Terima kasih atas komentar Anda! Komentar akan ditinjau sebelum dipublikasikan.');
+      alert('Terima kasih atas komentar Anda! Komentar akan ditinjau terlebih dahulu sebelum dipublikasikan.');
       this.reset();
     });
 
-    // Newsletter signup
-    document.querySelector('.bg-blue-50 form').addEventListener('submit', function(e) {
+    // Newsletter subscription
+    document.querySelector('form[class*="space-y-3"]').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Terima kasih! Anda telah berlangganan newsletter DEN.');
-      this.reset();
-    });
-
-    // Video play button
-    document.querySelector('.bg-gray-100 button').addEventListener('click', function() {
-      alert('Video akan segera dimuat...');
-    });
-
-    // Like button functionality
-    document.querySelectorAll('button[class*="fas fa-thumbs-up"]').forEach(button => {
-      button.addEventListener('click', function() {
-        const countSpan = this.parentElement;
-        let count = parseInt(countSpan.textContent.trim());
-        count++;
-        countSpan.innerHTML = `<i class="mr-1 fas fa-thumbs-up"></i>${count}`;
-        this.style.color = '#1e40af';
-      });
-    });
-
-    // Image gallery hover effects
-    document.querySelectorAll('.grid img').forEach(img => {
-      img.addEventListener('click', function() {
-        // Simple lightbox effect
-        const overlay = document.createElement('div');
-        overlay.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50';
-        overlay.innerHTML = `
-          <div class="relative max-w-4xl max-h-full p-4">
-            <img src="${this.src}" alt="${this.alt}" class="object-contain max-w-full max-h-full rounded-lg">
-            <button class="absolute text-2xl text-white top-4 right-4 hover:text-gray-300">
-              <i class="fas fa-times"></i>
-            </button>
-          </div>
-        `;
-        
-        document.body.appendChild(overlay);
-        
-        overlay.addEventListener('click', function(e) {
-          if (e.target === overlay || e.target.closest('button')) {
-            document.body.removeChild(overlay);
-          }
-        });
-      });
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Reading progress indicator
-    const progressBar = document.createElement('div');
-    progressBar.className = 'fixed top-0 left-0 w-0 h-1 bg-blue-600 z-50 transition-all duration-300';
-    document.body.appendChild(progressBar);
-
-    window.addEventListener('scroll', function() {
-      const article = document.querySelector('article');
-      if (article) {
-        const articleTop = article.offsetTop;
-        const articleHeight = article.offsetHeight;
-        const windowHeight = window.innerHeight;
-        const scrollTop = window.pageYOffset;
-        
-        const progress = Math.min(100, Math.max(0, 
-          ((scrollTop - articleTop + windowHeight) / articleHeight) * 100
-        ));
-        
-        progressBar.style.width = progress + '%';
+      const email = this.querySelector('input[type="email"]').value;
+      if (email) {
+        alert('Terima kasih! Anda telah berlangganan newsletter DEN.');
+        this.reset();
       }
     });
 
-    // Social media hover effects
-    document.querySelectorAll('.p-2').forEach(button => {
-      button.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-2px)';
-      });
-      
-      button.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-      });
-    });
-
-    // Tag click functionality
-    document.querySelectorAll('.px-2').forEach(tag => {
-      tag.addEventListener('click', function() {
-        const tagText = this.textContent.trim();
-        alert(`Mencari konten dengan tag: ${tagText}`);
+    // Like button functionality
+    document.querySelectorAll('button[class*="fa-thumbs-up"]').forEach(button => {
+      button.addEventListener('click', function() {
+        const count = parseInt(this.textContent.trim());
+        this.innerHTML = `<i class="mr-1 fas fa-thumbs-up"></i>${count + 1}`;
+        this.classList.add('text-den-secondary');
       });
     });
   </script>

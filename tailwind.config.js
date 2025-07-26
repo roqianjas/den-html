@@ -9,13 +9,25 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f0f9ff',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+        // DEN Brand Colors
+        den: {
+          primary: '#302919',      // Main brand color
+          secondary: '#85590F',    // Accent color
+          gold: '#F2D793',         // Gold accent
+          dark: '#0F0D08',         // Footer background
+          'dark-alpha': '#0F0D08D9', // Program cards background
+        },
+        // Header Colors
+        header: {
+          'from': '#1E1E1E',       // Header gradient start
+          'to': '#323232',         // Header gradient end
+          'border': '#5e5e5e',     // Header border
+        },
+        // Text Colors
+        text: {
+          primary: '#21272A',      // Hero text
+          secondary: '#0F172A',    // Section headings
+          dark: '#1E1E1E',         // Dark text
         }
       },
       fontFamily: {
