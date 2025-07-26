@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publikasi - Dewan Ekonomi Nasional</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-    <nav class="py-3 container-custom section-padding">
+    <nav class="px-4 py-3 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center space-x-3">
@@ -19,10 +20,10 @@
         
         <!-- Desktop Navigation -->
         <div class="items-center hidden space-x-8 lg:flex">
-          <a href="#beranda" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-primary-600">Beranda</a>
-          <a href="#profil" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-primary-600">Profil</a>
-          <a href="#informasi" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-primary-600">Informasi</a>
-          <a href="#publikasi" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-primary-600">Publikasi</a>
+          <a href="#beranda" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Beranda</a>
+          <a href="#profil" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Profil</a>
+          <a href="#informasi" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Informasi</a>
+          <a href="#publikasi" class="px-3 py-2 font-medium text-blue-600 rounded-lg bg-blue-50">Publikasi</a>
 
           <!-- Language Selector -->
           <div class="flex items-center space-x-2 text-gray-600">
@@ -49,10 +50,10 @@
             </div>
             <nav class="p-4">
               <div class="space-y-4">
-                <a href="#beranda" class="block py-2 font-medium text-gray-700 hover:text-primary-600">Beranda</a>
-                <a href="#profil" class="block py-2 font-medium text-gray-700 hover:text-primary-600">Profil</a>
-                <a href="#informasi" class="block py-2 font-medium text-gray-700 hover:text-primary-600">Informasi</a>
-                <a href="#publikasi" class="block py-2 font-medium text-gray-700 hover:text-primary-600">Publikasi</a>
+                <a href="#beranda" class="block py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Beranda</a>
+                <a href="#profil" class="block py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Profil</a>
+                <a href="#informasi" class="block py-2 font-medium text-gray-700 transition-colors hover:text-blue-600">Informasi</a>
+                <a href="#publikasi" class="block py-2 font-medium text-blue-600">Publikasi</a>
 
                 <div class="pt-4 border-t">
                   <div class="flex items-center space-x-2 text-gray-600">
@@ -71,7 +72,7 @@
   <!-- Hero Section -->
   <section class="relative py-20 text-white bg-gradient-to-r from-gray-900 to-gray-800">
     <div class="absolute inset-0 bg-black opacity-30"></div>
-    <div class="relative container-custom section-padding">
+    <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <h1 class="mb-4 text-4xl font-bold">Publikasi</h1>
       <p class="text-xl text-gray-300">
         Kumpulan publikasi dan kajian strategis dari Dewan Ekonomi Nasional
@@ -81,103 +82,103 @@
 
   <!-- Filter Tabs -->
   <section class="py-8 bg-white border-b">
-    <div class="container-custom section-padding">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="flex flex-wrap gap-4">
-        <button class="px-6 py-2 font-medium text-white rounded-lg bg-primary-600">Policy Brief</button>
-        <button class="px-6 py-2 font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">Kajian Strategis</button>
-        <button class="px-6 py-2 font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">Indikator Ekonomi</button>
-        <button class="px-6 py-2 font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">Memo Ketua DEN kepada Presiden</button>
-        <button class="px-6 py-2 font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">Jurnal</button>
+        <button class="px-6 py-2 font-medium text-white bg-blue-600 rounded-lg filter-btn active">Policy Brief</button>
+        <button class="px-6 py-2 font-medium text-gray-700 transition-colors bg-gray-200 rounded-lg hover:bg-gray-300 filter-btn">Kajian Strategis</button>
+        <button class="px-6 py-2 font-medium text-gray-700 transition-colors bg-gray-200 rounded-lg hover:bg-gray-300 filter-btn">Indikator Ekonomi</button>
+        <button class="px-6 py-2 font-medium text-gray-700 transition-colors bg-gray-200 rounded-lg hover:bg-gray-300 filter-btn">Memo Ketua DEN kepada Presiden</button>
+        <button class="px-6 py-2 font-medium text-gray-700 transition-colors bg-gray-200 rounded-lg hover:bg-gray-300 filter-btn">Jurnal</button>
       </div>
     </div>
   </section>
 
   <!-- Publikasi Grid -->
   <section class="py-16">
-    <div class="container-custom section-padding">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         <!-- Publikasi Item 1 -->
-        <div class="transition-shadow card hover:shadow-xl">
+        <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
           <img src="https://placehold.co/300x200/374151/ffffff?text=Istana+Negara" alt="Istana Negara" class="object-cover w-full h-48 mb-4 rounded-lg">
           <div class="mb-2 text-sm text-gray-500">15 Juli 2025</div>
-          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Mengenal Istana Negara Jakarta, Dari Lokasi, Fungsi hingga Sejarahnya</h3>
+          <h3 class="mb-2 font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">Mengenal Istana Negara Jakarta, Dari Lokasi, Fungsi hingga Sejarahnya</h3>
           <p class="mb-4 text-sm text-gray-600">Indonesia memiliki sejarah panjang terhadap perjuangan meraih kemerdekaan dari negara penjajah. Karena inilah, Indonesia juga memiliki banyak istana...</p>
-          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+          <a href="#" class="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700">Baca Selengkapnya →</a>
         </div>
 
         <!-- Publikasi Item 2 -->
-        <div class="transition-shadow card hover:shadow-xl">
+        <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
           <img src="https://placehold.co/300x200/374151/ffffff?text=Economic+Policy" alt="Economic Policy" class="object-cover w-full h-48 mb-4 rounded-lg">
           <div class="mb-2 text-sm text-gray-500">14 Juli 2025</div>
-          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Reaffirming Multilateralism: A Proposal for ASEAN Common Framework</h3>
+          <h3 class="mb-2 font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">Reaffirming Multilateralism: A Proposal for ASEAN Common Framework</h3>
           <p class="mb-4 text-sm text-gray-600">Necessary to synchronize between ASEAN countries becomes all ID ASEAN countries are affected by the US reciprocal...</p>
-          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+          <a href="#" class="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700">Baca Selengkapnya →</a>
         </div>
 
         <!-- Publikasi Item 3 -->
-        <div class="transition-shadow card hover:shadow-xl">
+        <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
           <img src="https://placehold.co/300x200/374151/ffffff?text=Digital+Economy" alt="Digital Economy" class="object-cover w-full h-48 mb-4 rounded-lg">
           <div class="mb-2 text-sm text-gray-500">13 Juli 2025</div>
-          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Transformasi Digital dalam Ekonomi Indonesia</h3>
+          <h3 class="mb-2 font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">Transformasi Digital dalam Ekonomi Indonesia</h3>
           <p class="mb-4 text-sm text-gray-600">Analisis mendalam tentang dampak transformasi digital terhadap pertumbuhan ekonomi Indonesia dan strategi implementasinya...</p>
-          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+          <a href="#" class="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700">Baca Selengkapnya →</a>
         </div>
 
         <!-- Publikasi Item 4 -->
-        <div class="transition-shadow card hover:shadow-xl">
+        <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
           <img src="https://placehold.co/300x200/374151/ffffff?text=Green+Economy" alt="Green Economy" class="object-cover w-full h-48 mb-4 rounded-lg">
           <div class="mb-2 text-sm text-gray-500">12 Juli 2025</div>
-          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Ekonomi Hijau dan Transisi Energi</h3>
+          <h3 class="mb-2 font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">Ekonomi Hijau dan Transisi Energi</h3>
           <p class="mb-4 text-sm text-gray-600">Kajian strategis mengenai peluang dan tantangan dalam implementasi ekonomi hijau di Indonesia...</p>
-          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+          <a href="#" class="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700">Baca Selengkapnya →</a>
         </div>
 
         <!-- Publikasi Item 5-8 -->
-        <div class="transition-shadow card hover:shadow-xl">
+        <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
           <img src="https://placehold.co/300x200/374151/ffffff?text=Food+Security" alt="Food Security" class="object-cover w-full h-48 mb-4 rounded-lg">
           <div class="mb-2 text-sm text-gray-500">11 Juli 2025</div>
-          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Ketahanan Pangan Nasional: Strategi dan Implementasi</h3>
+          <h3 class="mb-2 font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">Ketahanan Pangan Nasional: Strategi dan Implementasi</h3>
           <p class="mb-4 text-sm text-gray-600">Evaluasi komprehensif terhadap program ketahanan pangan nasional dan rekomendasi kebijakan...</p>
-          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+          <a href="#" class="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700">Baca Selengkapnya →</a>
         </div>
 
-        <div class="transition-shadow card hover:shadow-xl">
+        <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
           <img src="https://placehold.co/300x200/374151/ffffff?text=Infrastructure" alt="Infrastructure" class="object-cover w-full h-48 mb-4 rounded-lg">
           <div class="mb-2 text-sm text-gray-500">10 Juli 2025</div>
-          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Pembangunan Infrastruktur dan Dampak Ekonomi</h3>
+          <h3 class="mb-2 font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">Pembangunan Infrastruktur dan Dampak Ekonomi</h3>
           <p class="mb-4 text-sm text-gray-600">Analisis dampak pembangunan infrastruktur terhadap pertumbuhan ekonomi regional dan nasional...</p>
-          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+          <a href="#" class="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700">Baca Selengkapnya →</a>
         </div>
 
-        <div class="transition-shadow card hover:shadow-xl">
+        <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
           <img src="https://placehold.co/300x200/374151/ffffff?text=Financial+Sector" alt="Financial Sector" class="object-cover w-full h-48 mb-4 rounded-lg">
           <div class="mb-2 text-sm text-gray-500">09 Juli 2025</div>
-          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Penguatan Sektor Keuangan Indonesia</h3>
+          <h3 class="mb-2 font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">Penguatan Sektor Keuangan Indonesia</h3>
           <p class="mb-4 text-sm text-gray-600">Strategi penguatan sektor keuangan untuk mendukung pertumbuhan ekonomi yang berkelanjutan...</p>
-          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+          <a href="#" class="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700">Baca Selengkapnya →</a>
         </div>
 
-        <div class="transition-shadow card hover:shadow-xl">
+        <div class="p-6 transition-shadow bg-white shadow-lg rounded-xl hover:shadow-xl">
           <img src="https://placehold.co/300x200/374151/ffffff?text=Trade+Policy" alt="Trade Policy" class="object-cover w-full h-48 mb-4 rounded-lg">
           <div class="mb-2 text-sm text-gray-500">08 Juli 2025</div>
-          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Kebijakan Perdagangan Internasional</h3>
+          <h3 class="mb-2 font-bold text-gray-900 transition-colors cursor-pointer hover:text-blue-600">Kebijakan Perdagangan Internasional</h3>
           <p class="mb-4 text-sm text-gray-600">Evaluasi kebijakan perdagangan internasional Indonesia dan strategi optimalisasi...</p>
-          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+          <a href="#" class="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700">Baca Selengkapnya →</a>
         </div>
       </div>
 
       <!-- Pagination -->
       <div class="flex justify-center mt-12">
         <nav class="flex items-center space-x-2">
-          <button class="px-3 py-2 text-gray-500 hover:text-gray-700">
+          <button class="px-3 py-2 text-gray-500 transition-colors hover:text-gray-700">
             <i class="fas fa-chevron-left"></i>
           </button>
-          <button class="px-3 py-2 text-white rounded bg-primary-600">1</button>
-          <button class="px-3 py-2 text-gray-700 rounded hover:bg-gray-100">2</button>
-          <button class="px-3 py-2 text-gray-700 rounded hover:bg-gray-100">3</button>
-          <button class="px-3 py-2 text-gray-700 rounded hover:bg-gray-100">4</button>
-          <button class="px-3 py-2 text-gray-700 rounded hover:bg-gray-100">5</button>
-          <button class="px-3 py-2 text-gray-500 hover:text-gray-700">
+          <button class="px-3 py-2 text-white bg-blue-600 rounded">1</button>
+          <button class="px-3 py-2 text-gray-700 transition-colors rounded hover:bg-gray-100">2</button>
+          <button class="px-3 py-2 text-gray-700 transition-colors rounded hover:bg-gray-100">3</button>
+          <button class="px-3 py-2 text-gray-700 transition-colors rounded hover:bg-gray-100">4</button>
+          <button class="px-3 py-2 text-gray-700 transition-colors rounded hover:bg-gray-100">5</button>
+          <button class="px-3 py-2 text-gray-500 transition-colors hover:text-gray-700">
             <i class="fas fa-chevron-right"></i>
           </button>
         </nav>
@@ -185,9 +186,33 @@
     </div>
   </section>
 
+  <!-- Newsletter Section -->
+  <section class="py-16 bg-blue-50">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="mb-4 text-3xl font-bold text-gray-900">Berlangganan Newsletter</h2>
+        <p class="mb-8 text-gray-600">Dapatkan update publikasi terbaru dari Dewan Ekonomi Nasional langsung di inbox Anda.</p>
+        <form class="flex flex-col gap-4 sm:flex-row">
+          <input 
+            type="email" 
+            placeholder="Masukkan email Anda" 
+            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          >
+          <button 
+            type="submit" 
+            class="px-8 py-3 font-medium text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <i class="mr-2 fas fa-envelope"></i>
+            Berlangganan
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="py-12 text-white bg-gray-900">
-    <div class="container-custom section-padding">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
       <div class="grid gap-8 md:grid-cols-3">
         <!-- Logo & Description -->
         <div>
@@ -199,13 +224,13 @@
             Dewan Ekonomi Nasional mempunyai tugas menyelenggarakan pemberian dukungan dan rekomendasi kepada Presiden dalam melaksanakan percepatan pelaksanaan kebijakan strategis dan program prioritas di bidang ekonomi.
           </p>
           <div class="flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a href="#" class="flex items-center justify-center w-8 h-8 text-gray-400 transition-colors bg-gray-700 rounded hover:text-white hover:bg-gray-600">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a href="#" class="flex items-center justify-center w-8 h-8 text-gray-400 transition-colors bg-gray-700 rounded hover:text-white hover:bg-gray-600">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white">
+            <a href="#" class="flex items-center justify-center w-8 h-8 text-gray-400 transition-colors bg-gray-700 rounded hover:text-white hover:bg-gray-600">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -215,10 +240,10 @@
         <div>
           <h3 class="mb-4 text-lg font-bold">Link</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">Beranda</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Profil</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Informasi</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Publikasi</a></li>
+            <li><a href="#" class="text-gray-400 transition-colors hover:text-white">Beranda</a></li>
+            <li><a href="#" class="text-gray-400 transition-colors hover:text-white">Profil</a></li>
+            <li><a href="#" class="text-gray-400 transition-colors hover:text-white">Informasi</a></li>
+            <li><a href="#" class="text-gray-400 transition-colors hover:text-white">Publikasi</a></li>
           </ul>
         </div>
 
@@ -227,15 +252,15 @@
           <h3 class="mb-4 text-lg font-bold">Contact Info</h3>
           <div class="space-y-3">
             <div class="flex items-start space-x-3">
-              <i class="mt-1 fas fa-map-marker-alt text-gold-400"></i>
+              <i class="mt-1 text-yellow-400 fas fa-map-marker-alt"></i>
               <span class="text-gray-400">Jl. M.H. Thamrin No.8, Kb. Sirih, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10340</span>
             </div>
             <div class="flex items-center space-x-3">
-              <i class="fas fa-phone text-gold-400"></i>
+              <i class="text-yellow-400 fas fa-phone"></i>
               <span class="text-gray-400">+62-21-23951100</span>
             </div>
             <div class="flex items-center space-x-3">
-              <i class="fas fa-envelope text-gold-400"></i>
+              <i class="text-yellow-400 fas fa-envelope"></i>
               <span class="text-gray-400">sekretariat@dewanekonomi.go.id</span>
             </div>
           </div>
@@ -246,9 +271,9 @@
       <div class="flex flex-col items-center justify-between pt-8 mt-8 border-t border-gray-800 md:flex-row">
         <p class="text-gray-400">&copy; 2025 Dewan Ekonomi Nasional. Hak Cipta Dilindungi.</p>
         <div class="flex mt-4 space-x-6 md:mt-0">
-          <a href="#" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
-          <a href="#" class="text-sm text-gray-400 hover:text-white">Term of Service</a>
-          <a href="#" class="text-sm text-gray-400 hover:text-white">Cookie Policy</a>
+          <a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Privacy Policy</a>
+          <a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Term of Service</a>
+          <a href="#" class="text-sm text-gray-400 transition-colors hover:text-white">Cookie Policy</a>
         </div>
       </div>
     </div>
@@ -256,17 +281,152 @@
 
   <script type="module" src="/src/main.js"></script>
   <script>
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileOverlay.classList.remove('hidden');
+      setTimeout(() => {
+        mobileMenuPanel.classList.remove('translate-x-full');
+      }, 10);
+    });
+
+    const closeMobileMenu = () => {
+      mobileMenuPanel.classList.add('translate-x-full');
+      setTimeout(() => {
+        mobileOverlay.classList.add('hidden');
+      }, 300);
+    };
+
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileOverlay.addEventListener('click', (e) => {
+      if (e.target === mobileOverlay) {
+        closeMobileMenu();
+      }
+    });
+
     // Filter functionality
-    document.querySelectorAll('button[class*="px-6 py-2"]').forEach(button => {
+    document.querySelectorAll('.filter-btn').forEach(button => {
       button.addEventListener('click', function() {
         // Remove active class from all buttons
-        document.querySelectorAll('button[class*="px-6 py-2"]').forEach(btn => {
-          btn.className = 'px-6 py-2 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300';
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.className = 'px-6 py-2 font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors filter-btn';
         });
         // Add active class to clicked button
-        this.className = 'px-6 py-2 bg-primary-600 text-white rounded-lg font-medium';
+        this.className = 'px-6 py-2 font-medium text-white rounded-lg bg-blue-600 filter-btn active';
+        
+        // Add loading effect
+        const originalText = this.textContent;
+        this.innerHTML = '<i class="mr-2 fas fa-spinner fa-spin"></i>Loading...';
+        
+        setTimeout(() => {
+          this.textContent = originalText;
+        }, 1000);
       });
     });
+
+    // Newsletter form
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      const button = this.querySelector('button');
+      const originalText = button.innerHTML;
+      
+      if (email) {
+        button.innerHTML = '<i class="mr-2 fas fa-spinner fa-spin"></i>Berlangganan...';
+        button.disabled = true;
+        
+        setTimeout(() => {
+          alert('Terima kasih! Anda telah berlangganan newsletter DEN.');
+          this.reset();
+          button.innerHTML = originalText;
+          button.disabled = false;
+        }, 2000);
+      } else {
+        alert('Harap masukkan email yang valid.');
+      }
+    });
+
+    // Pagination functionality
+    document.querySelectorAll('nav button').forEach(button => {
+      button.addEventListener('click', function() {
+        if (!this.querySelector('i')) { // Not arrow buttons
+          // Remove active state from all page buttons
+          document.querySelectorAll('nav button').forEach(btn => {
+            if (!btn.querySelector('i')) {
+              btn.className = 'px-3 py-2 text-gray-700 rounded hover:bg-gray-100 transition-colors';
+            }
+          });
+          // Add active state to clicked button
+          this.className = 'px-3 py-2 text-white rounded bg-blue-600';
+        }
+      });
+    });
+
+    // Card hover effects
+    document.querySelectorAll('.hover\\:shadow-xl').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-4px)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Search functionality (if needed)
+    function addSearchFunctionality() {
+      const searchInput = document.createElement('div');
+      searchInput.className = 'relative max-w-md mx-auto mb-8';
+      searchInput.innerHTML = `
+        <input 
+          type="text" 
+          placeholder="Cari publikasi..." 
+          class="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          id="search-input"
+        >
+        <i class="absolute text-gray-400 fas fa-search left-3 top-3"></i>
+      `;
+      
+      const filterSection = document.querySelector('section.py-8');
+      filterSection.appendChild(searchInput);
+      
+      document.getElementById('search-input').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const cards = document.querySelectorAll('.hover\\:shadow-xl');
+        
+        cards.forEach(card => {
+          const title = card.querySelector('h3').textContent.toLowerCase();
+          const description = card.querySelector('p').textContent.toLowerCase();
+          
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = searchTerm ? 'none' : 'block';
+          }
+        });
+      });
+    }
+
+    // Initialize search functionality
+    // addSearchFunctionality();
   </script>
 </body>
 </html>
