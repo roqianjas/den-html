@@ -42,20 +42,25 @@ document.addEventListener('DOMContentLoaded', function() {
   mobileLinks.forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
-});
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  });
+  // Mobile Informasi Dropdown
+  const mobileInformasiButton = document.getElementById('mobile-informasi-button');
+  const mobileInformasiMenu = document.getElementById('mobile-informasi-menu');
+  const mobileInformasiIcon = document.getElementById('mobile-informasi-icon');
+
+  if (mobileInformasiButton) {
+    mobileInformasiButton.addEventListener('click', function() {
+      const isHidden = mobileInformasiMenu.classList.contains('hidden');
+      
+      if (isHidden) {
+        mobileInformasiMenu.classList.remove('hidden');
+        mobileInformasiIcon.classList.add('rotate-180');
+      } else {
+        mobileInformasiMenu.classList.add('hidden');
+        mobileInformasiIcon.classList.remove('rotate-180');
+      }
+    });
+  }
 });
 
 // Header scroll effect
@@ -130,6 +135,7 @@ document.addEventListener('keydown', function(e) {
         mobileOverlay.classList.add('hidden');
       }, 300);
     }
+
   }
 });
 
