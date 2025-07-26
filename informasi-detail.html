@@ -10,28 +10,62 @@
 </head>
 <body class="bg-gray-50">
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white shadow-sm">
-    <nav class="py-4 container-custom section-padding">
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <nav class="py-3 container-custom section-padding">
       <div class="flex items-center justify-between">
+        <!-- Logo -->
         <div class="flex items-center space-x-3">
-          <img src="https://placehold.co/40x40/1e40af/white?text=DEN" alt="DEN Logo" class="w-10 h-10 rounded-full">
-          <span class="text-xl font-bold text-gray-900">Dewan Ekonomi Nasional</span>
+          <img src="https://placehold.co/32x32/f59e0b/white?text=🇮🇩" alt="Indonesia Logo" class="w-8 h-8">
+          <span class="text-lg font-semibold text-gray-900">Dewan Ekonomi Nasional</span>
         </div>
         
-        <div class="items-center hidden space-x-8 md:flex">
-          <a href="index.html" class="font-medium text-gray-700 hover:text-primary-600">Beranda</a>
-          <a href="profil.html" class="font-medium text-gray-700 hover:text-primary-600">Profil</a>
-          <a href="informasi.html" class="font-medium text-primary-600">Informasi</a>
-          <a href="publikasi.html" class="font-medium text-gray-700 hover:text-primary-600">Publikasi</a>
-          <div class="flex items-center space-x-2">
-            <span class="text-gray-600">ID</span>
-            <i class="text-gray-600 fas fa-globe"></i>
+        <!-- Desktop Navigation -->
+        <div class="items-center hidden space-x-8 lg:flex">
+          <a href="#beranda" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-primary-600">Beranda</a>
+          <a href="#profil" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-primary-600">Profil</a>
+          <a href="#informasi" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-primary-600">Informasi</a>
+          <a href="#publikasi" class="px-3 py-2 font-medium text-gray-700 transition-colors hover:text-primary-600">Publikasi</a>
+
+          <!-- Language Selector -->
+          <div class="flex items-center space-x-2 text-gray-600">
+            <span class="text-sm font-medium">ID</span>
+            <i class="text-xs fas fa-chevron-down"></i>
           </div>
         </div>
         
-        <button class="md:hidden">
-          <i class="text-gray-700 fas fa-bars"></i>
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden" id="mobile-menu-button">
+          <i class="text-xl text-gray-700 fas fa-bars"></i>
         </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="lg:hidden" id="mobile-menu">
+        <div class="fixed inset-0 z-50 hidden bg-black bg-opacity-50" id="mobile-overlay">
+          <div class="fixed inset-y-0 right-0 w-64 transition-transform duration-300 transform translate-x-full bg-white shadow-xl" id="mobile-menu-panel">
+            <div class="flex items-center justify-between p-4 border-b">
+              <span class="font-semibold text-gray-900">Menu</span>
+              <button id="mobile-menu-close">
+                <i class="text-gray-500 fas fa-times"></i>
+              </button>
+            </div>
+            <nav class="p-4">
+              <div class="space-y-4">
+                <a href="#beranda" class="block py-2 font-medium text-gray-700 hover:text-primary-600">Beranda</a>
+                <a href="#profil" class="block py-2 font-medium text-gray-700 hover:text-primary-600">Profil</a>
+                <a href="#informasi" class="block py-2 font-medium text-gray-700 hover:text-primary-600">Informasi</a>
+                <a href="#publikasi" class="block py-2 font-medium text-gray-700 hover:text-primary-600">Publikasi</a>
+
+                <div class="pt-4 border-t">
+                  <div class="flex items-center space-x-2 text-gray-600">
+                    <span class="text-sm font-medium">ID</span>
+                    <i class="text-xs fas fa-chevron-down"></i>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -466,6 +500,7 @@
   <footer class="py-12 text-white bg-gray-900">
     <div class="container-custom section-padding">
       <div class="grid gap-8 md:grid-cols-3">
+        <!-- Logo & Description -->
         <div>
           <div class="flex items-center mb-4 space-x-3">
             <img src="https://placehold.co/40x40/1e40af/white?text=DEN" alt="DEN Logo" class="w-10 h-10 rounded-full">
@@ -487,16 +522,18 @@
           </div>
         </div>
 
+        <!-- Links -->
         <div>
           <h3 class="mb-4 text-lg font-bold">Link</h3>
           <ul class="space-y-2">
-            <li><a href="index.html" class="text-gray-400 hover:text-white">Beranda</a></li>
-            <li><a href="profil.html" class="text-gray-400 hover:text-white">Profil</a></li>
-            <li><a href="informasi.html" class="text-gray-400 hover:text-white">Informasi</a></li>
-            <li><a href="publikasi.html" class="text-gray-400 hover:text-white">Publikasi</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Beranda</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Profil</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Informasi</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Publikasi</a></li>
           </ul>
         </div>
 
+        <!-- Contact Info -->
         <div>
           <h3 class="mb-4 text-lg font-bold">Contact Info</h3>
           <div class="space-y-3">
@@ -516,11 +553,12 @@
         </div>
       </div>
 
+      <!-- Bottom Footer -->
       <div class="flex flex-col items-center justify-between pt-8 mt-8 border-t border-gray-800 md:flex-row">
         <p class="text-gray-400">&copy; 2025 Dewan Ekonomi Nasional. Hak Cipta Dilindungi.</p>
         <div class="flex mt-4 space-x-6 md:mt-0">
           <a href="#" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
-          <a href="#" class="text-sm text-gray-400 hover:text-white">Terms of Service</a>
+          <a href="#" class="text-sm text-gray-400 hover:text-white">Term of Service</a>
           <a href="#" class="text-sm text-gray-400 hover:text-white">Cookie Policy</a>
         </div>
       </div>
