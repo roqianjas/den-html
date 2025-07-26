@@ -105,41 +105,6 @@ document.querySelectorAll('.card, section').forEach(el => {
   observer.observe(el);
 });
 
-// Mega menu positioning for desktop - IMPROVED
-function adjustMegaMenuPosition() {
-  const megaMenus = document.querySelectorAll('.mega-menu');
-  
-  megaMenus.forEach(menu => {
-    const rect = menu.getBoundingClientRect();
-    const viewportWidth = window.innerWidth;
-    const menuWidth = menu.offsetWidth;
-    
-    // Reset positioning
-    menu.style.left = '50%';
-    menu.style.transform = 'translateX(-50%)';
-    menu.style.right = 'auto';
-    
-    // Check if menu overflows viewport
-    const menuLeft = rect.left;
-    const menuRight = rect.right;
-    
-    if (menuLeft < 0) {
-      // Menu overflows left side
-      menu.style.left = '0';
-      menu.style.transform = 'translateX(0)';
-    } else if (menuRight > viewportWidth) {
-      // Menu overflows right side
-      menu.style.left = 'auto';
-      menu.style.right = '0';
-      menu.style.transform = 'translateX(0)';
-    }
-  });
-}
-
-// Call on resize and load
-window.addEventListener('resize', adjustMegaMenuPosition);
-window.addEventListener('load', adjustMegaMenuPosition);
-
 // Detail page navigation
 function setupDetailNavigation() {
   // Back to top button

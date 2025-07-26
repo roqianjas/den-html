@@ -32,15 +32,6 @@
   }
 }
 
-/* Mega Menu Styles - FIXED untuk Zoom & Flash */
-.group:hover .group-hover\:visible {
-  visibility: visible;
-}
-
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1;
-}
-
 /* Mobile Menu Animation */
 .mobile-menu-open {
   transform: translateX(0) !important;
@@ -50,138 +41,11 @@
   display: block !important;
 }
 
-/* Mega Menu Positioning - FIXED untuk semua zoom level */
-.mega-menu {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 100%;
-  margin: 0 auto;
-  width: 1000px;
-  max-width: calc(100vw - 4rem);
-  z-index: 50;
-  
-  /* PERBAIKAN: Prevent flash on load */
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  
-  /* PERBAIKAN: Better positioning untuk zoom */
-  transform: translateX(-50%);
-  left: 50%;
-  right: auto;
-  
-  /* PERBAIKAN: Smooth transition */
-  transition: all 0.2s ease-in-out;
-}
-
-/* PERBAIKAN: Hover state yang lebih stabil */
-.group:hover .mega-menu {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* PERBAIKAN: Responsive breakpoints yang lebih akurat */
-@media (max-width: 1200px) {
-  .mega-menu {
-    width: 900px;
-    max-width: calc(100vw - 3rem);
-  }
-}
-
-@media (max-width: 1024px) {
-  .mega-menu {
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100vw - 2rem);
-    max-width: 800px;
-  }
-}
-
-@media (max-width: 768px) {
-  .mega-menu {
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100vw - 1rem);
-    max-width: none;
-  }
-}
-
-/* PERBAIKAN: Zoom-safe positioning */
-@supports (zoom: 1) {
-  .mega-menu {
-    /* Use viewport units untuk zoom stability */
-    left: 50vw;
-    transform: translateX(-50%);
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-/* PERBAIKAN: Alternative untuk browser yang tidak support zoom detection */
-@media screen and (min-resolution: 1.1dppx) {
-  .mega-menu {
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
 /* Mobile Navigation Improvements */
 @media (max-width: 1024px) {
   .mobile-menu-panel {
     width: 280px;
   }
-}
-
-/* Hover Effects for Mega Menu */
-.mega-menu a:hover {
-  color: #2563eb;
-  transition: color 0.2s ease;
-}
-
-.mega-menu h3 {
-  border-bottom: 2px solid #e5e7eb;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-/* Featured Article in Mega Menu */
-.mega-menu .featured-article {
-  background-color: #f8fafc;
-  border-radius: 0.5rem;
-  padding: 1rem;
-  border: 1px solid #e2e8f0;
-}
-
-.mega-menu .featured-article:hover {
-  background-color: #f1f5f9;
-  transition: background-color 0.2s ease;
-}
-
-/* PERBAIKAN: Prevent layout shift during hover */
-.mega-menu-trigger {
-  position: relative;
-}
-
-.mega-menu-trigger::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background: transparent;
-}
-
-/* PERBAIKAN: Better hover area */
-.group:hover .mega-menu,
-.mega-menu:hover {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
 }
 
 /* Footer Social Icons */
@@ -199,53 +63,6 @@
 .footer-social-icon:hover {
   background-color: #1f2937;
   color: white;
-}
-
-/* Responsive Mega Menu */
-@media (max-width: 768px) {
-  .mega-menu {
-    position: static;
-    visibility: visible !important;
-    opacity: 1 !important;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-    transform: none;
-    left: auto;
-    right: auto;
-    width: 100%;
-    max-width: none;
-  }
-  
-  .mega-menu .grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-/* PERBAIKAN: Prevent flash dengan CSS-only solution */
-.mega-menu-container {
-  position: relative;
-}
-
-.mega-menu-container:not(:hover) .mega-menu {
-  display: none;
-}
-
-.mega-menu-container:hover .mega-menu {
-  display: block;
-  animation: fadeInMega 0.2s ease-in-out;
-}
-
-@keyframes fadeInMega {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
 }
 
 /* Dark mode styles */
