@@ -98,7 +98,7 @@ document.querySelectorAll('section > div > div > div').forEach(el => {
 function setupBackToTop() {
   const backToTopBtn = document.createElement('button');
   backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-  backToTopBtn.className = 'fixed z-50 w-12 h-12 text-white transition-all duration-300 bg-blue-600 rounded-full shadow-lg opacity-0 pointer-events-none bottom-6 right-6 hover:bg-blue-700';
+  backToTopBtn.className = 'bg-[#85590F] hover:bg-[#85590F] fixed z-50 w-12 h-12 text-white transition-all duration-300 bg-blue-600 rounded-full shadow-lg opacity-0 pointer-events-none bottom-6 right-6 hover:bg-blue-700';
   backToTopBtn.setAttribute('aria-label', 'Back to top');
   document.body.appendChild(backToTopBtn);
 
