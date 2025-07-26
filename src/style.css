@@ -1,0 +1,467 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 font-medium text-white transition-colors rounded-lg bg-primary-600 hover:bg-primary-700;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 font-medium text-gray-700 transition-colors border border-gray-300 rounded-lg hover:border-gray-400;
+  }
+  
+  .card {
+    @apply p-6 bg-white shadow-lg rounded-xl;
+  }
+  
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply mx-auto max-w-7xl;
+  }
+}
+
+/* Mega Menu Styles - FIXED untuk Zoom & Flash */
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-open {
+  transform: translateX(0) !important;
+}
+
+.mobile-menu-overlay-show {
+  display: block !important;
+}
+
+/* Mega Menu Positioning - FIXED untuk semua zoom level */
+.mega-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 0 auto;
+  width: 1000px;
+  max-width: calc(100vw - 4rem);
+  z-index: 50;
+  
+  /* PERBAIKAN: Prevent flash on load */
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  
+  /* PERBAIKAN: Better positioning untuk zoom */
+  transform: translateX(-50%);
+  left: 50%;
+  right: auto;
+  
+  /* PERBAIKAN: Smooth transition */
+  transition: all 0.2s ease-in-out;
+}
+
+/* PERBAIKAN: Hover state yang lebih stabil */
+.group:hover .mega-menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* PERBAIKAN: Responsive breakpoints yang lebih akurat */
+@media (max-width: 1200px) {
+  .mega-menu {
+    width: 900px;
+    max-width: calc(100vw - 3rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .mega-menu {
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 2rem);
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mega-menu {
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 1rem);
+    max-width: none;
+  }
+}
+
+/* PERBAIKAN: Zoom-safe positioning */
+@supports (zoom: 1) {
+  .mega-menu {
+    /* Use viewport units untuk zoom stability */
+    left: 50vw;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* PERBAIKAN: Alternative untuk browser yang tidak support zoom detection */
+@media screen and (min-resolution: 1.1dppx) {
+  .mega-menu {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 1024px) {
+  .mobile-menu-panel {
+    width: 280px;
+  }
+}
+
+/* Hover Effects for Mega Menu */
+.mega-menu a:hover {
+  color: #2563eb;
+  transition: color 0.2s ease;
+}
+
+.mega-menu h3 {
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Featured Article in Mega Menu */
+.mega-menu .featured-article {
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+.mega-menu .featured-article:hover {
+  background-color: #f1f5f9;
+  transition: background-color 0.2s ease;
+}
+
+/* PERBAIKAN: Prevent layout shift during hover */
+.mega-menu-trigger {
+  position: relative;
+}
+
+.mega-menu-trigger::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: transparent;
+}
+
+/* PERBAIKAN: Better hover area */
+.group:hover .mega-menu,
+.mega-menu:hover {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Footer Social Icons */
+.footer-social-icon {
+  width: 32px;
+  height: 32px;
+  background-color: #374151;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover {
+  background-color: #1f2937;
+  color: white;
+}
+
+/* Responsive Mega Menu */
+@media (max-width: 768px) {
+  .mega-menu {
+    position: static;
+    visibility: visible !important;
+    opacity: 1 !important;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    transform: none;
+    left: auto;
+    right: auto;
+    width: 100%;
+    max-width: none;
+  }
+  
+  .mega-menu .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* PERBAIKAN: Prevent flash dengan CSS-only solution */
+.mega-menu-container {
+  position: relative;
+}
+
+.mega-menu-container:not(:hover) .mega-menu {
+  display: none;
+}
+
+.mega-menu-container:hover .mega-menu {
+  display: block;
+  animation: fadeInMega 0.2s ease-in-out;
+}
+
+@keyframes fadeInMega {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .dark body {
+    @apply text-white bg-gray-900;
+  }
+  
+  .dark .card {
+    @apply text-white bg-gray-800;
+  }
+  
+  .dark header {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .dark .btn-outline {
+    @apply text-gray-300 border-gray-600 hover:border-gray-500;
+  }
+}
+
+/* Detail Pages Specific Styles */
+.prose {
+  color: #374151;
+  max-width: none;
+}
+
+.prose h1 {
+  color: #111827;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.prose h2 {
+  color: #111827;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  color: #111827;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose blockquote {
+  font-style: italic;
+  border-left: 4px solid #1e40af;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: #4b5563;
+  font-size: 1.125rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+/* Image gallery hover effects */
+.prose img {
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.prose img:hover {
+  transform: scale(1.02);
+}
+
+/* Share buttons hover effects */
+.share-btn {
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Comment section styles */
+.comment-item {
+  transition: background-color 0.2s ease;
+}
+
+.comment-item:hover {
+  background-color: #f9fafb;
+}
+
+/* Tag hover effects */
+.tag-item {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tag-item:hover {
+  background-color: #dbeafe;
+  color: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  z-index: 1000;
+  transition: width 0.3s ease;
+}
+
+/* Lightbox styles */
+.lightbox-overlay {
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Newsletter signup hover effect */
+.newsletter-card {
+  transition: all 0.3s ease;
+}
+
+.newsletter-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.1);
+}
+
+/* Responsive adjustments for detail pages */
+@media (max-width: 768px) {
+  .prose h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .prose h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .prose blockquote {
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .share-btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Print styles for articles */
+@media print {
+  .share-btn,
+  .comment-section,
+  .sidebar,
+  header,
+  footer {
+    display: none !important;
+  }
+  
+  .prose {
+    max-width: 100% !important;
+  }
+  
+  .prose h1,
+  .prose h2,
+  .prose h3 {
+    break-after: avoid;
+  }
+  
+  .prose p {
+    orphans: 3;
+    widows: 3;
+  }
+}
+
+/* Accessibility improvements */
+.share-btn:focus,
+.tag-item:focus {
+  outline: 2px solid #1e40af;
+  outline-offset: 2px;
+}
+
+/* Loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

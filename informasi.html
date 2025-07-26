@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informasi - Dewan Ekonomi Nasional</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow-sm">
+    <nav class="py-4 container-custom section-padding">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <img src="https://placehold.co/40x40/1e40af/white?text=DEN" alt="DEN Logo" class="w-10 h-10 rounded-full">
+          <span class="text-xl font-bold text-gray-900">Dewan Ekonomi Nasional</span>
+        </div>
+        
+        <div class="items-center hidden space-x-8 md:flex">
+          <a href="index.html" class="font-medium text-gray-700 hover:text-primary-600">Beranda</a>
+          <a href="profil.html" class="font-medium text-gray-700 hover:text-primary-600">Profil</a>
+          <a href="informasi.html" class="font-medium text-primary-600">Informasi</a>
+          <a href="publikasi.html" class="font-medium text-gray-700 hover:text-primary-600">Publikasi</a>
+          <div class="flex items-center space-x-2">
+            <span class="text-gray-600">ID</span>
+            <i class="text-gray-600 fas fa-globe"></i>
+          </div>
+        </div>
+        
+        <button class="md:hidden">
+          <i class="text-gray-700 fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-20 text-white bg-gradient-to-r from-gray-900 to-gray-800">
+    <div class="absolute inset-0 bg-black opacity-30"></div>
+    <div class="relative container-custom section-padding">
+      <h1 class="mb-4 text-4xl font-bold">Informasi Terkini</h1>
+      <p class="text-xl text-gray-300">
+        Berita dan informasi terbaru seputar kegiatan dan kebijakan Dewan Ekonomi Nasional
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured News -->
+  <section class="py-16 bg-white">
+    <div class="container-custom section-padding">
+      <h2 class="mb-8 text-3xl font-bold text-gray-900">Berita Utama</h2>
+      
+      <div class="grid gap-8 mb-12 lg:grid-cols-2">
+        <!-- Main Featured News -->
+        <div class="relative">
+          <img src="https://placehold.co/600x400/374151/ffffff?text=Featured+News" alt="Featured News" class="object-cover w-full rounded-lg h-80">
+          <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-black/70 to-transparent"></div>
+          <div class="absolute text-white bottom-6 left-6 right-6">
+            <div class="mb-2 text-sm">26 Juli 2025</div>
+            <h3 class="mb-3 text-2xl font-bold">DEN Rapat Koordinasi Percepatan Program Makan Bergizi Gratis</h3>
+            <p class="mb-4 text-gray-200">Dewan Ekonomi Nasional menggelar rapat koordinasi untuk membahas percepatan implementasi program makan bergizi gratis di seluruh Indonesia...</p>
+            <a href="#" class="inline-flex items-center font-medium text-gold-400 hover:text-gold-300">
+              Baca Selengkapnya <i class="ml-2 fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Side Featured News -->
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <img src="https://placehold.co/150x100/374151/ffffff?text=News+1" alt="News" class="flex-shrink-0 object-cover w-32 h-24 rounded-lg">
+            <div>
+              <div class="mb-1 text-sm text-gray-500">25 Juli 2025</div>
+              <h4 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Ketua DEN Bahas Strategi Hilirisasi Nikel dengan Investor Asing</h4>
+              <p class="text-sm text-gray-600">Pertemuan strategis membahas peluang investasi dalam industri hilir nikel...</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <img src="https://placehold.co/150x100/374151/ffffff?text=News+2" alt="News" class="flex-shrink-0 object-cover w-32 h-24 rounded-lg">
+            <div>
+              <div class="mb-1 text-sm text-gray-500">24 Juli 2025</div>
+              <h4 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">DEN Luncurkan Dashboard Monitoring Ekonomi Digital</h4>
+              <p class="text-sm text-gray-600">Platform digital untuk memantau perkembangan ekonomi digital Indonesia...</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <img src="https://placehold.co/150x100/374151/ffffff?text=News+3" alt="News" class="flex-shrink-0 object-cover w-32 h-24 rounded-lg">
+            <div>
+              <div class="mb-1 text-sm text-gray-500">23 Juli 2025</div>
+              <h4 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Evaluasi Program Swasembada Pangan Semester I 2025</h4>
+              <p class="text-sm text-gray-600">Hasil evaluasi menunjukkan progress positif dalam pencapaian target...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News Grid -->
+  <section class="py-16 bg-gray-50">
+    <div class="container-custom section-padding">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-bold text-gray-900">Berita Terbaru</h2>
+        <div class="flex gap-2">
+          <button class="px-4 py-2 text-sm text-white rounded-lg bg-primary-600">Semua</button>
+          <button class="px-4 py-2 text-sm text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">Kebijakan</button>
+          <button class="px-4 py-2 text-sm text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">Kegiatan</button>
+          <button class="px-4 py-2 text-sm text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">Ekonomi</button>
+        </div>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- News Item 1 -->
+        <article class="transition-shadow card hover:shadow-xl">
+          <img src="https://placehold.co/300x200/374151/ffffff?text=Economic+Meeting" alt="Economic Meeting" class="object-cover w-full h-48 mb-4 rounded-lg">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Kebijakan</span>
+            <span class="text-sm text-gray-500">22 Juli 2025</span>
+          </div>
+          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">DEN Rekomendasikan Percepatan Digitalisasi UMKM</h3>
+          <p class="mb-4 text-sm text-gray-600">Rekomendasi strategis untuk mempercepat transformasi digital sektor UMKM guna meningkatkan daya saing...</p>
+          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+        </article>
+
+        <!-- News Item 2 -->
+        <article class="transition-shadow card hover:shadow-xl">
+          <img src="https://placehold.co/300x200/374151/ffffff?text=Green+Energy" alt="Green Energy" class="object-cover w-full h-48 mb-4 rounded-lg">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Ekonomi</span>
+            <span class="text-sm text-gray-500">21 Juli 2025</span>
+          </div>
+          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Roadmap Transisi Energi Indonesia 2025-2030</h3>
+          <p class="mb-4 text-sm text-gray-600">DEN menyusun roadmap komprehensif untuk transisi energi berkelanjutan Indonesia...</p>
+          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+        </article>
+
+        <!-- News Item 3 -->
+        <article class="transition-shadow card hover:shadow-xl">
+          <img src="https://placehold.co/300x200/374151/ffffff?text=Infrastructure" alt="Infrastructure" class="object-cover w-full h-48 mb-4 rounded-lg">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-full">Kegiatan</span>
+            <span class="text-sm text-gray-500">20 Juli 2025</span>
+          </div>
+          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Kunjungan Kerja DEN ke Kawasan Industri Batang</h3>
+          <p class="mb-4 text-sm text-gray-600">Evaluasi langsung perkembangan kawasan industri dan dampaknya terhadap ekonomi daerah...</p>
+          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+        </article>
+
+        <!-- News Item 4 -->
+        <article class="transition-shadow card hover:shadow-xl">
+          <img src="https://placehold.co/300x200/374151/ffffff?text=Food+Security" alt="Food Security" class="object-cover w-full h-48 mb-4 rounded-lg">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2 py-1 text-xs text-blue-800 bg-blue-100 rounded-full">Kebijakan</span>
+            <span class="text-sm text-gray-500">19 Juli 2025</span>
+          </div>
+          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Strategi Ketahanan Pangan Nasional 2025</h3>
+          <p class="mb-4 text-sm text-gray-600">DEN menyusun strategi komprehensif untuk menjamin ketahanan pangan nasional...</p>
+          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+        </article>
+
+        <!-- News Item 5 -->
+        <article class="transition-shadow card hover:shadow-xl">
+          <img src="https://placehold.co/300x200/374151/ffffff?text=Digital+Economy" alt="Digital Economy" class="object-cover w-full h-48 mb-4 rounded-lg">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2 py-1 text-xs text-green-800 bg-green-100 rounded-full">Ekonomi</span>
+            <span class="text-sm text-gray-500">18 Juli 2025</span>
+          </div>
+          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Perkembangan Ekonomi Digital Indonesia Q2 2025</h3>
+          <p class="mb-4 text-sm text-gray-600">Analisis pertumbuhan sektor ekonomi digital dan kontribusinya terhadap PDB...</p>
+          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+        </article>
+
+        <!-- News Item 6 -->
+        <article class="transition-shadow card hover:shadow-xl">
+          <img src="https://placehold.co/300x200/374151/ffffff?text=Investment" alt="Investment" class="object-cover w-full h-48 mb-4 rounded-lg">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="px-2 py-1 text-xs text-purple-800 bg-purple-100 rounded-full">Kegiatan</span>
+            <span class="text-sm text-gray-500">17 Juli 2025</span>
+          </div>
+          <h3 class="mb-2 font-bold text-gray-900 cursor-pointer hover:text-primary-600">Forum Investasi Indonesia-Jepang 2025</h3>
+          <p class="mb-4 text-sm text-gray-600">DEN memfasilitasi forum investasi bilateral untuk memperkuat kerjasama ekonomi...</p>
+          <a href="#" class="text-sm font-medium text-primary-600 hover:text-primary-700">Baca Selengkapnya →</a>
+        </article>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="mt-12 text-center">
+        <button class="btn-outline">Muat Lebih Banyak</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Subscription -->
+  <section class="py-16 bg-primary-600">
+    <div class="container-custom section-padding">
+      <div class="text-center text-white">
+        <h2 class="mb-4 text-3xl font-bold">Dapatkan Update Terbaru</h2>
+        <p class="mb-8 text-xl text-blue-100">Berlangganan newsletter untuk mendapatkan informasi terkini dari DEN</p>
+        
+        <div class="max-w-md mx-auto">
+          <div class="flex gap-2">
+            <input type="email" placeholder="Masukkan email Anda" class="flex-1 px-4 py-3 text-gray-900 rounded-lg">
+            <button class="px-6 py-3 font-medium text-white transition-colors rounded-lg bg-gold-500 hover:bg-gold-600">
+              Berlangganan
+            </button>
+          </div>
+          <p class="mt-2 text-sm text-blue-100">Kami menghormati privasi Anda dan tidak akan membagikan email Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 text-white bg-gray-900">
+    <div class="container-custom section-padding">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <div class="flex items-center mb-4 space-x-3">
+            <img src="https://placehold.co/40x40/1e40af/white?text=DEN" alt="DEN Logo" class="w-10 h-10 rounded-full">
+            <span class="text-xl font-bold">Dewan Ekonomi Nasional</span>
+          </div>
+          <p class="mb-4 text-gray-400">
+            Dewan Ekonomi Nasional mempunyai tugas menyelenggarakan pemberian dukungan dan rekomendasi kepada Presiden dalam melaksanakan percepatan pelaksanaan kebijakan strategis dan program prioritas di bidang ekonomi.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="mb-4 text-lg font-bold">Link</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Beranda</a></li>
+            <li><a href="profil.html" class="text-gray-400 hover:text-white">Profil</a></li>
+            <li><a href="informasi.html" class="text-gray-400 hover:text-white">Informasi</a></li>
+            <li><a href="publikasi.html" class="text-gray-400 hover:text-white">Publikasi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 text-lg font-bold">Contact Info</h3>
+          <div class="space-y-3">
+            <div class="flex items-start space-x-3">
+              <i class="mt-1 fas fa-map-marker-alt text-gold-400"></i>
+              <span class="text-gray-400">Jl. M.H. Thamrin No.8, Kb. Sirih, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10340</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-phone text-gold-400"></i>
+              <span class="text-gray-400">+62-21-23951100</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <i class="fas fa-envelope text-gold-400"></i>
+              <span class="text-gray-400">sekretariat@dewanekonomi.go.id</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center justify-between pt-8 mt-8 border-t border-gray-800 md:flex-row">
+        <p class="text-gray-400">&copy; 2025 Dewan Ekonomi Nasional. Hak Cipta Dilindungi.</p>
+        <div class="flex mt-4 space-x-6 md:mt-0">
+          <a href="#" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
+          <a href="#" class="text-sm text-gray-400 hover:text-white">Term of Service</a>
+          <a href="#" class="text-sm text-gray-400 hover:text-white">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    // Filter functionality for news categories
+    document.querySelectorAll('button[class*="px-4 py-2"]').forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        document.querySelectorAll('button[class*="px-4 py-2"]').forEach(btn => {
+          btn.className = 'px-4 py-2 bg-gray-200 text-gray-700 rounded-lg text-sm hover:bg-gray-300';
+        });
+        // Add active class to clicked button
+        this.className = 'px-4 py-2 bg-primary-600 text-white rounded-lg text-sm';
+      });
+    });
+
+    // Newsletter subscription
+    document.querySelector('button[class*="bg-gold-500"]').addEventListener('click', function() {
+      const email = document.querySelector('input[type="email"]').value;
+      if (email) {
+        alert('Terima kasih! Anda telah berlangganan newsletter DEN.');
+        document.querySelector('input[type="email"]').value = '';
+      } else {
+        alert('Silakan masukkan alamat email yang valid.');
+      }
+    });
+  </script>
+</body>
+</html>
