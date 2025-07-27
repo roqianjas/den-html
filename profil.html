@@ -244,66 +244,209 @@
   <!-- Struktur Organisasi Section -->
   <section class="py-16 bg-white">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-      <h2 class="mb-12 text-3xl font-bold text-center text-gray-900">Struktur Organisasi</h2>
-      
-      <!-- Ketua -->
       <div class="mb-12 text-center">
-        <div class="inline-block">
-          <img src="https://placehold.co/150x150/302919/ffffff?text=LBP" alt="Luhut Binsar Pandjaitan" class="w-32 h-32 mx-auto mb-4 rounded-full shadow-lg">
-          <h3 class="text-lg font-bold text-gray-900">Luhut Binsar Pandjaitan</h3>
-          <p class="text-gray-600">Ketua</p>
-        </div>
+        <h2 class="mb-4 text-3xl font-bold text-gray-900">Struktur Organisasi</h2>
       </div>
 
-      <!-- Wakil Ketua -->
-      <div class="mb-12 text-center">
-        <div class="inline-block">
-          <img src="https://placehold.co/150x150/302919/ffffff?text=MEP" alt="Mari Eka Pangestu" class="w-32 h-32 mx-auto mb-4 rounded-full shadow-lg">
-          <h3 class="text-lg font-bold text-gray-900">Mari Eka Pangestu</h3>
-          <p class="text-gray-600">Wakil Ketua</p>
-        </div>
-      </div>
+      <div class="relative" id="org-chart-container">
+        <!-- SVG for lines - positioned behind cards -->
+        <svg id="org-chart-lines" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index: 1;">
+          <!-- Lines will be drawn here by JavaScript -->
+        </svg>
 
-      <!-- Anggota -->
-      <div class="grid gap-8 mb-12 md:grid-cols-2 lg:grid-cols-4">
-        <div class="text-center">
-          <img src="https://placehold.co/120x120/302919/ffffff?text=MCB" alt="M. Chatib Basri" class="w-24 h-24 mx-auto mb-3 rounded-full shadow-lg">
-          <h4 class="font-bold text-gray-900">M. Chatib Basri</h4>
-          <p class="text-sm text-gray-600">Anggota</p>
-        </div>
-        <div class="text-center">
-          <img src="https://placehold.co/120x120/302919/ffffff?text=HA" alt="Haryanto Adikoesoemo" class="w-24 h-24 mx-auto mb-3 rounded-full shadow-lg">
-          <h4 class="font-bold text-gray-900">Haryanto Adikoesoemo</h4>
-          <p class="text-sm text-gray-600">Anggota</p>
-        </div>
-        <div class="text-center">
-          <img src="https://placehold.co/120x120/302919/ffffff?text=HI" alt="Heriyanto Irawan" class="w-24 h-24 mx-auto mb-3 rounded-full shadow-lg">
-          <h4 class="font-bold text-gray-900">Heriyanto Irawan</h4>
-          <p class="text-sm text-gray-600">Anggota</p>
-        </div>
-        <div class="text-center">
-          <img src="https://placehold.co/120x120/302919/ffffff?text=AAY" alt="Arief Anshory Yusuf" class="w-24 h-24 mx-auto mb-3 rounded-full shadow-lg">
-          <h4 class="font-bold text-gray-900">Arief Anshory Yusuf</h4>
-          <p class="text-sm text-gray-600">Anggota</p>
-        </div>
-      </div>
+        <!-- Cards container - positioned in front of lines -->
+        <div class="relative" style="z-index: 10;">
+          <!-- Ketua (Top Level) -->
+          <div class="flex justify-center mb-12">
+            <div id="ketua-card" class="relative">
+              <div class="flex flex-col items-center p-6 transition-all duration-300 bg-white border-2 border-gray-200 shadow-lg rounded-xl hover:shadow-xl w-80">
+                <div class="w-20 h-20 mb-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img src="https://placehold.co/80x80/302919/ffffff?text=LBP" alt="Luhut Binsar Pandjaitan" class="object-cover w-full h-full">
+                </div>
+                <div class="text-center">
+                  <p class="mb-1 text-sm font-medium text-den-gold">Ketua</p>
+                  <h3 class="text-lg font-bold text-gray-900">Luhut Binsar Pandjaitan</h3>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <!-- Direktur Eksekutif -->
-      <div class="grid gap-8 md:grid-cols-3">
-        <div class="text-center">
-          <img src="https://placehold.co/120x120/302919/ffffff?text=GR" alt="Gaffari Ramadhan" class="w-24 h-24 mx-auto mb-3 rounded-full shadow-lg">
-          <h4 class="font-bold text-gray-900">Gaffari Ramadhan</h4>
-          <p class="text-sm text-gray-600">Direktur Eksekutif Bidang Strategi dan Kebijakan Ekonomi</p>
-        </div>
-        <div class="text-center">
-          <img src="https://placehold.co/120x120/302919/ffffff?text=TN" alt="Tubagus Nugraha" class="w-24 h-24 mx-auto mb-3 rounded-full shadow-lg">
-          <h4 class="font-bold text-gray-900">Tubagus Nugraha</h4>
-          <p class="text-sm text-gray-600">Direktur Eksekutif Bidang Sinkronisasi Kebijakan Program Prioritas Ekonomi</p>
-        </div>
-        <div class="text-center">
-          <img src="https://placehold.co/120x120/302919/ffffff?text=PPS" alt="Pantro Pander Silitonga" class="w-24 h-24 mx-auto mb-3 rounded-full shadow-lg">
-          <h4 class="font-bold text-gray-900">Pantro Pander Silitonga</h4>
-          <p class="text-sm text-gray-600">Direktur Eksekutif Bidang Pemantauan dan Evaluasi Program Prioritas Ekonomi</p>
+          <!-- Second Level: Wakil Ketua and Staf Khusus -->
+          <div class="flex items-start justify-between mb-12">
+            <!-- Left side: Anggota -->
+            <div class="w-1/3">
+              <div class="space-y-4">
+                <!-- M. Chatib Basri -->
+                <div id="anggota-1" class="flex items-center p-4 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+                  <div class="flex-shrink-0 w-12 h-12 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                    <img src="https://placehold.co/48x48/302919/ffffff?text=MCB" alt="M. Chatib Basri" class="object-cover w-full h-full">
+                  </div>
+                  <div>
+                    <p class="text-xs font-medium text-den-gold">Anggota</p>
+                    <h4 class="text-sm font-semibold text-gray-900">M. Chatib Basri</h4>
+                  </div>
+                </div>
+
+                <!-- Haryanto Adikoesoemo -->
+                <div id="anggota-2" class="flex items-center p-4 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+                  <div class="flex-shrink-0 w-12 h-12 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                    <img src="https://placehold.co/48x48/302919/ffffff?text=HA" alt="Haryanto Adikoesoemo" class="object-cover w-full h-full">
+                  </div>
+                  <div>
+                    <p class="text-xs font-medium text-den-gold">Anggota</p>
+                    <h4 class="text-sm font-semibold text-gray-900">Haryanto Adikoesoemo</h4>
+                  </div>
+                </div>
+
+                <!-- Heriyanto Irawan -->
+                <div id="anggota-3" class="flex items-center p-4 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+                  <div class="flex-shrink-0 w-12 h-12 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                    <img src="https://placehold.co/48x48/302919/ffffff?text=HI" alt="Heriyanto Irawan" class="object-cover w-full h-full">
+                  </div>
+                  <div>
+                    <p class="text-xs font-medium text-den-gold">Anggota</p>
+                    <h4 class="text-sm font-semibold text-gray-900">Heriyanto Irawan</h4>
+                  </div>
+                </div>
+
+                <!-- Arief Anshory Yusuf -->
+                <div id="anggota-4" class="flex items-center p-4 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+                  <div class="flex-shrink-0 w-12 h-12 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                    <img src="https://placehold.co/48x48/302919/ffffff?text=AAY" alt="Arief Anshory Yusuf" class="object-cover w-full h-full">
+                  </div>
+                  <div>
+                    <p class="text-xs font-medium text-den-gold">Anggota</p>
+                    <h4 class="text-sm font-semibold text-gray-900">Arief Anshory Yusuf</h4>
+                  </div>
+                </div>
+
+                <!-- Septian Hario Seto -->
+                <div id="anggota-5" class="flex items-center p-4 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+                  <div class="flex-shrink-0 w-12 h-12 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                    <img src="https://placehold.co/48x48/302919/ffffff?text=SHS" alt="Septian Hario Seto" class="object-cover w-full h-full">
+                  </div>
+                  <div>
+                    <p class="text-xs font-medium text-den-gold">Anggota <span class="text-xs text-gray-500">(merangkap sebagai Sekretaris Eksekutif)</span></p>
+                    <h4 class="text-sm font-semibold text-gray-900">Septian Hario Seto</h4>
+                  </div>
+                </div>
+
+                <!-- M Firman Hidayat -->
+                <div id="anggota-6" class="flex items-center p-4 transition-all duration-300 bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg">
+                  <div class="flex-shrink-0 w-12 h-12 mr-4 overflow-hidden bg-gray-200 rounded-full">
+                    <img src="https://placehold.co/48x48/302919/ffffff?text=MFH" alt="M Firman Hidayat" class="object-cover w-full h-full">
+                  </div>
+                  <div>
+                    <p class="text-xs font-medium text-den-gold">Anggota</p>
+                    <h4 class="text-sm font-semibold text-gray-900">M Firman Hidayat</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Center: Wakil Ketua -->
+            <div class="flex flex-col items-center w-1/3">
+              <div id="wakil-ketua-card" class="mb-8">
+                <div class="flex flex-col items-center p-6 transition-all duration-300 bg-white border-2 border-gray-200 shadow-lg rounded-xl hover:shadow-xl w-72">
+                  <div class="w-20 h-20 mb-4 overflow-hidden bg-gray-200 rounded-full">
+                    <img src="https://placehold.co/80x80/302919/ffffff?text=MEP" alt="Mari Eka Pangestu" class="object-cover w-full h-full">
+                  </div>
+                  <div class="text-center">
+                    <p class="mb-1 text-sm font-medium text-den-gold">Wakil Ketua Dewan</p>
+                    <h3 class="text-lg font-bold text-gray-900">Mari Eka Pangestu</h3>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sekretaris Eksekutif -->
+              <div id="sekretaris-eksekutif" class="mb-6">
+                <div class="w-48 p-4 text-center border border-gray-200 rounded-lg bg-gray-50">
+                  <h4 class="text-sm font-semibold text-gray-900">Sekretaris Eksekutif</h4>
+                </div>
+              </div>
+
+              <!-- Kepala Sekretariat -->
+              <div id="kepala-sekretariat" class="mb-8">
+                <div class="w-48 p-4 text-center border border-gray-200 rounded-lg bg-gray-50">
+                  <h4 class="text-sm font-semibold text-gray-900">Kepala Sekretariat</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right side: Staf Khusus -->
+            <div class="flex justify-end w-1/3">
+              <div id="staf-khusus" class="w-48 p-4 text-center border border-gray-200 rounded-lg bg-gray-50">
+                <h4 class="text-sm font-semibold text-gray-900">Staf Khusus</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Level: Direktur Eksekutif -->
+          <div class="grid grid-cols-4 gap-6">
+            <!-- Direktur Eksekutif 1 -->
+            <div id="direktur-1" class="flex flex-col items-center">
+              <div class="w-full p-6 transition-all duration-300 bg-white border border-gray-200 shadow-md rounded-xl hover:shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img src="https://placehold.co/64x64/302919/ffffff?text=GR" alt="Gaffari Ramadhan" class="object-cover w-full h-full">
+                </div>
+                <div class="text-center">
+                  <p class="mb-2 text-xs font-medium text-den-gold">Direktur Eksekutif Bidang Strategi dan Kebijakan Ekonomi</p>
+                  <h4 class="mb-3 text-sm font-bold text-gray-900">Gaffari Ramadhan</h4>
+                  <div class="p-2 text-xs text-gray-700 rounded bg-gray-50">
+                    Tenaga Profesional
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direktur Eksekutif 2 -->
+            <div id="direktur-2" class="flex flex-col items-center">
+              <div class="w-full p-6 transition-all duration-300 bg-white border border-gray-200 shadow-md rounded-xl hover:shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img src="https://placehold.co/64x64/302919/ffffff?text=MFH" alt="M. Firman Hidayat" class="object-cover w-full h-full">
+                </div>
+                <div class="text-center">
+                  <p class="mb-2 text-xs font-medium text-den-gold">Direktur Eksekutif Bidang Percepatan Program Prioritas Ekonomi</p>
+                  <h4 class="mb-3 text-sm font-bold text-gray-900">M. Firman Hidayat</h4>
+                  <div class="p-2 text-xs text-gray-700 rounded bg-gray-50">
+                    Tenaga Profesional
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direktur Eksekutif 3 -->
+            <div id="direktur-3" class="flex flex-col items-center">
+              <div class="w-full p-6 transition-all duration-300 bg-white border border-gray-200 shadow-md rounded-xl hover:shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img src="https://placehold.co/64x64/302919/ffffff?text=TN" alt="Tubagus Nugraha" class="object-cover w-full h-full">
+                </div>
+                <div class="text-center">
+                  <p class="mb-2 text-xs font-medium text-den-gold">Direktur Eksekutif Bidang Sinkronisasi Kebijakan Program Prioritas Ekonomi</p>
+                  <h4 class="mb-3 text-sm font-bold text-gray-900">Tubagus Nugraha</h4>
+                  <div class="p-2 text-xs text-gray-700 rounded bg-gray-50">
+                    Tenaga Profesional
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direktur Eksekutif 4 -->
+            <div id="direktur-4" class="flex flex-col items-center">
+              <div class="w-full p-6 transition-all duration-300 bg-white border border-gray-200 shadow-md rounded-xl hover:shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 overflow-hidden bg-gray-200 rounded-full">
+                  <img src="https://placehold.co/64x64/302919/ffffff?text=PPS" alt="Pantro Pander Silitonga" class="object-cover w-full h-full">
+                </div>
+                <div class="text-center">
+                  <p class="mb-2 text-xs font-medium text-den-gold">Direktur Eksekutif Bidang Pemantauan dan Evaluasi Program Prioritas Ekonomi</p>
+                  <h4 class="mb-3 text-sm font-bold text-gray-900">Pantro Pander Silitonga</h4>
+                  <div class="p-2 text-xs text-gray-700 rounded bg-gray-50">
+                    Tenaga Profesional
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -668,6 +811,8 @@
   </footer>
 
   <script type="module" src="/src/main.js"></script>
+
+  <!-- Contact Form -->
   <script>
     // Contact form functionality
     function setupContactForm() {
@@ -743,5 +888,338 @@
       setupContactForm(); // Add this line
     });
   </script>
+
+  <!-- Organizational Chart -->
+  <script>
+  // Custom Organizational Chart Lines using SVG
+  class OrganizationalChart {
+    constructor() {
+      this.svg = null;
+      this.container = null;
+      this.lines = [];
+    }
+
+    init() {
+      this.container = document.getElementById('org-chart-container');
+      this.svg = document.getElementById('org-chart-lines');
+      
+      if (!this.container || !this.svg) {
+        console.log('Organizational chart elements not found');
+        return;
+      }
+
+      this.drawLines();
+    }
+
+    getElementCenter(element) {
+      const rect = element.getBoundingClientRect();
+      const containerRect = this.container.getBoundingClientRect();
+      
+      return {
+        x: rect.left - containerRect.left + rect.width / 2,
+        y: rect.top - containerRect.top + rect.height / 2,
+        top: rect.top - containerRect.top,
+        bottom: rect.bottom - containerRect.top,
+        left: rect.left - containerRect.left,
+        right: rect.right - containerRect.left
+      };
+    }
+
+    createLine(x1, y1, x2, y2, className = '') {
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x1);
+      line.setAttribute('y1', y1);
+      line.setAttribute('x2', x2);
+      line.setAttribute('y2', y2);
+      line.setAttribute('stroke', '#85590F');
+      line.setAttribute('stroke-width', '2');
+      line.setAttribute('class', className);
+      return line;
+    }
+
+    createPath(d, className = '') {
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', d);
+      path.setAttribute('stroke', '#85590F');
+      path.setAttribute('stroke-width', '2');
+      path.setAttribute('fill', 'none');
+      path.setAttribute('stroke-linecap', 'round');
+      path.setAttribute('stroke-linejoin', 'round');
+      path.setAttribute('class', className);
+      return path;
+    }
+
+    drawLines() {
+      // Clear existing lines
+      this.svg.innerHTML = '';
+      
+      // Update SVG size to match container
+      const containerRect = this.container.getBoundingClientRect();
+      this.svg.setAttribute('width', containerRect.width);
+      this.svg.setAttribute('height', containerRect.height);
+
+      try {
+        // Get all elements
+        const ketua = document.getElementById('ketua-card');
+        const wakilKetua = document.getElementById('wakil-ketua-card');
+        const stafKhusus = document.getElementById('staf-khusus');
+        const sekretarisEksekutif = document.getElementById('sekretaris-eksekutif');
+        const kepalaSekretatiat = document.getElementById('kepala-sekretariat');
+        
+        // Anggota elements
+        const anggotaElements = [
+          document.getElementById('anggota-1'),
+          document.getElementById('anggota-2'),
+          document.getElementById('anggota-3'),
+          document.getElementById('anggota-4'),
+          document.getElementById('anggota-5'),
+          document.getElementById('anggota-6')
+        ].filter(el => el !== null);
+        
+        // Direktur elements
+        const direkturElements = [
+          document.getElementById('direktur-1'),
+          document.getElementById('direktur-2'),
+          document.getElementById('direktur-3'),
+          document.getElementById('direktur-4')
+        ].filter(el => el !== null);
+
+        if (!ketua || !wakilKetua) return;
+
+        const ketuaPos = this.getElementCenter(ketua);
+        const wakilKetuaPos = this.getElementCenter(wakilKetua);
+
+        // Calculate T-junction level - tepat di bawah card ketua dengan jarak minimal
+        const tJunctionY = ketuaPos.bottom + 30; // Hanya 30px dari bawah card ketua
+
+        // 1. Main vertical line from Ketua down to T-junction level
+        const mainVerticalLine = this.createLine(
+          ketuaPos.x,
+          ketuaPos.bottom,
+          ketuaPos.x,
+          tJunctionY
+        );
+        this.svg.appendChild(mainVerticalLine);
+
+        // 2. Ketua to Staf Khusus (horizontal line from T-junction)
+        if (stafKhusus) {
+          const stafKhususPos = this.getElementCenter(stafKhusus);
+          
+          // Horizontal line from T-junction to the right towards staf khusus
+          const horizontalLine1 = this.createLine(
+            ketuaPos.x,
+            tJunctionY,
+            stafKhususPos.x,
+            tJunctionY
+          );
+          this.svg.appendChild(horizontalLine1);
+          
+          // Vertical line down to staf khusus
+          const verticalLine2 = this.createLine(
+            stafKhususPos.x,
+            tJunctionY,
+            stafKhususPos.x,
+            stafKhususPos.top
+          );
+          this.svg.appendChild(verticalLine2);
+        }
+
+        // 3. Ketua to all Anggota (horizontal line from T-junction to the left)
+        if (anggotaElements.length > 0) {
+          const anggotaPoints = anggotaElements.map(anggota => {
+            const pos = this.getElementCenter(anggota);
+            return { x: pos.x, y: pos.top };
+          });
+          
+          // Horizontal distribution line to the left from T-junction
+          const minX = Math.min(...anggotaPoints.map(p => p.x));
+          const horizontalLine2 = this.createLine(
+            minX,
+            tJunctionY,
+            ketuaPos.x,
+            tJunctionY
+          );
+          this.svg.appendChild(horizontalLine2);
+          
+          // Connect each anggota with vertical lines
+          anggotaPoints.forEach(point => {
+            const verticalLine = this.createLine(
+              point.x,
+              tJunctionY,
+              point.x,
+              point.y
+            );
+            this.svg.appendChild(verticalLine);
+          });
+        }
+
+        // 4. Separate line: Ketua to Wakil Ketua (independent vertical line)
+        // This line starts from the T-junction level to avoid overlap
+        const ketuaToWakilLine = this.createLine(
+          ketuaPos.x,
+          tJunctionY,
+          ketuaPos.x,
+          wakilKetuaPos.top
+        );
+        this.svg.appendChild(ketuaToWakilLine);
+
+        // 5. Wakil Ketua to Sekretaris Eksekutif (straight down)
+        if (sekretarisEksekutif) {
+          const sekretarisPos = this.getElementCenter(sekretarisEksekutif);
+          const line5 = this.createLine(
+            wakilKetuaPos.x, 
+            wakilKetuaPos.bottom, 
+            sekretarisPos.x, 
+            sekretarisPos.top
+          );
+          this.svg.appendChild(line5);
+
+          // 6. Sekretaris Eksekutif to Kepala Sekretariat (straight down)
+          if (kepalaSekretatiat) {
+            const kepalaPos = this.getElementCenter(kepalaSekretatiat);
+            const line6 = this.createLine(
+              sekretarisPos.x, 
+              sekretarisPos.bottom, 
+              kepalaPos.x, 
+              kepalaPos.top
+            );
+            this.svg.appendChild(line6);
+
+            // 7. Kepala Sekretariat to all Direktur (T-junction with better spacing)
+            if (direkturElements.length > 0) {
+              const direkturPoints = direkturElements.map(direktur => {
+                const pos = this.getElementCenter(direktur);
+                return { x: pos.x, y: pos.top };
+              });
+              
+              // Calculate safe distance to avoid collision with anggota
+              let lowestAnggotaY = 0;
+              if (anggotaElements.length > 0) {
+                lowestAnggotaY = Math.max(...anggotaElements.map(anggota => {
+                  const pos = this.getElementCenter(anggota);
+                  return pos.bottom;
+                }));
+              }
+              
+              // Find the highest direktur position
+              const highestDirektorY = Math.min(...direkturPoints.map(p => p.y));
+              
+              // Calculate safe junction point
+              const safeGap = 40;
+              const maxJunctionY = highestDirektorY - 80;
+              const minJunctionY = lowestAnggotaY + safeGap;
+              const junctionY = Math.max(minJunctionY, maxJunctionY);
+              
+              // Main vertical line from kepala sekretariat to junction
+              const mainLine = this.createLine(
+                kepalaPos.x,
+                kepalaPos.bottom,
+                kepalaPos.x,
+                junctionY
+              );
+              this.svg.appendChild(mainLine);
+              
+              // Horizontal distribution line
+              const minX = Math.min(...direkturPoints.map(p => p.x));
+              const maxX = Math.max(...direkturPoints.map(p => p.x));
+              
+              const horizontalLine = this.createLine(
+                minX,
+                junctionY,
+                maxX,
+                junctionY
+              );
+              this.svg.appendChild(horizontalLine);
+              
+              // Connect each direktur
+              direkturPoints.forEach(point => {
+                const verticalLine = this.createLine(
+                  point.x,
+                  junctionY,
+                  point.x,
+                  point.y
+                );
+                this.svg.appendChild(verticalLine);
+              });
+            }
+          }
+        }
+
+      } catch (error) {
+        console.error('Error drawing organizational lines:', error);
+      }
+    }
+
+    redraw() {
+      setTimeout(() => {
+        this.drawLines();
+      }, 100);
+    }
+  }
+
+  // Initialize organizational chart
+  let orgChart;
+
+  function initOrganizationalChart() {
+    orgChart = new OrganizationalChart();
+    orgChart.init();
+  }
+
+  // Initialize when DOM is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(initOrganizationalChart, 500);
+  });
+
+  // Redraw on window resize
+  let resizeTimeout;
+  window.addEventListener('resize', function() {
+    if (orgChart) {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        orgChart.redraw();
+      }, 250);
+    }
+  });
+
+  // Redraw when section becomes visible
+  const orgSection = document.querySelector('#org-chart-container');
+  if (orgSection) {
+    const orgObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && orgChart) {
+          setTimeout(() => orgChart.redraw(), 100);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    orgObserver.observe(orgSection);
+  }
+
+  // Handle card hover effects
+  function setupOrganizationalChart() {
+    const orgCards = document.querySelectorAll('[id*="anggota-"], [id*="direktur-"], #ketua-card, #wakil-ketua-card');
+    
+    orgCards.forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.02)';
+        this.style.zIndex = '20';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+        this.style.zIndex = '10';
+      });
+    });
+  }
+
+  // Initialize card effects
+  document.addEventListener('DOMContentLoaded', () => {
+    setupOrganizationalChart();
+  });
+  </script>
+
+
 </body>
 </html>

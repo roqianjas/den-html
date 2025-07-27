@@ -272,3 +272,10 @@ const debouncedScrollHandler = debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', debouncedScrollHandler);
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupBackToTop();
+  setupLazyLoading();
+  setupSearch();
+  setupCardEffects();
+});
